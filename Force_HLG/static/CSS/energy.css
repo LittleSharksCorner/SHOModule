@@ -19,6 +19,8 @@
     left: 5vw;
 }
 
+
+/* The explanation */
 #top{
     font-size: 1.7vw;
     color: rgb(241, 67, 105); 
@@ -26,7 +28,6 @@
     top: 18vh;
     left: 22vw;
 } 
-
 
 #process{
     font-size: 1.7vw;
@@ -45,19 +46,25 @@
 }
 
 
+/* The steps */
 #step-1{
     font-size: 1.3vw;
     justify-content: center;
     position: absolute;
     top: 50vh;
+    opacity: 0;
 }
 
-#button-box{
-    display:flexbox;
+#step-2{
+    font-size: 1.3vw;
+    justify-content: center;
     position: absolute;
-    top: 57vh;
+    top: 50vh;
+    opacity: 0;
 }
 
+
+/* The buttons */
 /* top | right | bottom | left */
 .buttons{
     margin: 0 5vw 0 5vw;
@@ -65,19 +72,56 @@
     border-radius: 0.2vw;
 }
 
+#button-box{
+    display:flexbox;
+    position: absolute;
+    /* top: 57vh; */
+}
+
+#buttonleft,#buttoncenter,#buttonright{
+    position: absolute;
+    top: 57vh;
+    opacity: 0;
+}
+
 #buttonleft{
     border: none;
-    background-color: rgb(241, 145, 166)
+    background-color: rgb(241, 145, 166);
+    left: 5%
 }
 
 #buttoncenter{
     border: none;
-    background-color: rgb(118, 126, 201)
+    background-color: rgb(118, 126, 201);
+    left: 40%
 }
 
 #buttonright{
     border: none;
-    background-color:rgb(103, 199, 154)
+    background-color:rgb(103, 199, 154);
+    right: 5%
 }
 
+#buttonleft-1{
+    border: none;
+    background-color: rgb(241, 145, 166);
+    left: 5%
+}
 
+#buttoncenter-1{
+    border: none;
+    background-color: rgb(118, 126, 201);
+    left: 40%
+}
+
+#buttonright-1{
+    border: none;
+    background-color:rgb(103, 199, 154);
+    right: 5%
+}
+
+#buttonleft-1,#buttoncenter-1,#buttonright-1{
+    position: absolute;
+    top: 57vh;
+    opacity: 0;
+}

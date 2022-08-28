@@ -101,25 +101,41 @@
         </h2>
     </div>
     <div class="ctr">
-      <h3 id="problem-text"> Anna’s favorite winter sport is sledding. 
-        This year, she is attending a sledding competition. Anna wants to 
-        estimate her speed at the bottom of the hill. Given her mass 
-      (Anna + the sled) is \(\mathbf{m}\), the height of the hill is \(\mathbf{h_0}\), energy 
-      loss due to friction between the sled and the snow is \(\mathbf{W}\), what is 
-      Anna’s speed \(\color{red} \mathbf{V_f}\) at the bottom of the hill? 
-       (\(\mathbf{g}\) is the gravitational constant) </h3>
+      <!-- The problem statement -->
+      <h3 id="problem-text"> Anna’s favorite winter activity is sledding. 
+        This year, she will compete in a sleeding tournament. Anna wants to 
+        how fast she is going at the bottom of the hill. Anna and the sled 
+        has mass \(\mathbf{m}\), the height of the hill is \(\mathbf{h_0}\), 
+        friction between the sled and the snow causdes energy loss \(\mathbf{W}\),
+         and \(\mathbf{g}\) is the gravitational constant. What is Anna's speed
+          \(\color{red} \mathbf{V_f}\) at the bottom of the hill? </h3>
       <img id="problem-img" src="{% static "IMG/energy/problem_img.svg"%}"/>
+
+
+      <!-- The steps -->
       <h3 id="step-1"><span style="font-size:2vw"><strong>Step 1:</strong></span> What are types 
         of energy and their formula that are involved in this problem?</h3>
+        <h3 id="step-2"><span style="font-size:2vw"><strong>Step 2:</strong></span> Apply conservation of energy! </h3>
+
+      <!-- The explanation   -->
       <h3 id="top"> 1. Potential energy \(\mathbf{=mgh_0}\)</h3>
       <h3 id="process"> 1. Potention energy \(\mathbf{=mgh}\)<br> 2. Kinetic energy \(\mathbf{=\frac{1}{2}mv^2}\) <br> 
         3. Energy loss due to friction \(\mathbf{=W}\)</h3>
       <h3 id="bottom">1. Kinetic energy \(\mathbf{\frac{1}{2}mV_{f}^{2}}\)</h3>
-      <div id="button-box">
-        <button id="buttonleft" class="buttons"> <strong>At the beginning</strong> </button>
-        <button id="buttoncenter" class="buttons"><strong>During the process</strong> </button>
-        <button id="buttonright" class="buttons"> <strong>At the end</strong> </button>
-      </div>
+
+      <!-- The buttons -->
+      <button id="buttonleft" class="buttons"> <strong>At the beginning</strong> </button>
+      <button id="buttoncenter" class="buttons"><strong>During the process</strong> </button>
+      <button id="buttonright" class="buttons"> <strong>At the end</strong> </button>
+
+      <button id="buttonleft-1" class="buttons"> <strong>Potential energy</strong> </button>
+      <button id="buttoncenter-1" class="buttons"><strong>Energy loss due to friction</strong> </button>
+      <button id="buttonright-1" class="buttons"> <strong>Kinetic energy</strong> </button>
+      
+
+      <!-- The audio buttons -->
+
+
     </div>
     <div class="ftr">
       <button class="btn primary reduced-vis" id="btn11">Back</button>
