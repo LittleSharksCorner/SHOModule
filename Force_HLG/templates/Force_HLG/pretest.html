@@ -1,0 +1,421 @@
+{% extends "base.html" %}
+
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static "utility.css"%}">
+<link rel="stylesheet" href="{% static "style.css"%}"> 
+<title>Force Module | Warmup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{% endblock %}
+
+{% load static %}
+{% block body %}
+            <!-- Navbar -->
+            <div id="navbar" class="navbar-container">
+                <div class="navbar-logo">
+                    <img id="logo" height="48" width="48" alt="" src="{% static "navbarico.svg" %}"></img>
+                    Energy Module
+                 </div>
+                 <div class="reporting">
+                    <div class="statement">
+                      <h4>I am feeling</h4>
+                    </div>
+                    <div id="mental-state-buttons">
+                      <button id="distracted-button" class="btn alternate1">Distracted</button>
+                      <button id="focused-button" class="btn primary">Focused</button>
+                    </div>
+                  </div>
+                <div class="tabs">
+                    <nav>
+                      <ul>
+                          <li><a id="Login" class="inactive" href="#">Login</a></li>
+                          <li><a id="Warm-Up" class="active" href="#">Warm-Up</a></li>
+                          <li><a id="Instruction" class="inactive" href="#">Instruction</a></li>
+                          <li><a id="Final" class="inactive" href="#">Final</a></li>        
+                      </ul>
+                    </nav>
+                </div>
+
+              </div>
+
+<form id="page-events" style="display: none">
+    {{forms.log}}
+    {%csrf_token%}
+</form>
+<form id="mouse-events" style="display: none">
+    {{forms.mouse}}
+    {%csrf_token%}
+</form>
+<form id="mouse-events2" style="display: none">
+    {{forms.mouse}}
+    {%csrf_token%}
+</form>
+
+<div id="start" style="width:100%; height:87vh; background-color: #f5f5f5;">
+    <h2 id="STRTstatement">Click Start to begin</h2>
+    <button id="start-btn" class="btn primary reduced-vis">START</button>
+  </div>
+
+<div id="pre-statement" class="wrapper pretest">
+    <div class="hdr">
+        <h1>In the present section</h1>
+    </div>
+    <div class="ctr">
+        <h3>We will answer a few questions just to get warmed up and get a background. This is the place to show us what you already know. Relax and do your best!</h3>
+    </div>
+    <div class="ftr">
+        <button id="pre-btn" class="btn primary reduced-vis">Next</button>
+    </div>
+</div>
+
+<!-- Question 1 -->
+<div class="wrapper pretest" id="q1-container" style="display: none;">
+    <div class="hdr">
+        <h2>What is the definition of kinetic energy (K)? Where \(m\) is mass and \(v\) is speed</h2>
+    </div> 
+    <div class="ctr quiz">
+        <div>               
+            <form method="POST" id="question1">
+                <p>Please select a choice below</p>
+                {{forms.form1.choice.0}}
+                <label for="id_choice_0">\(K=\frac{1}{2}mv\)</label><br/>
+                {{forms.form1.choice.1}}
+                <label for="id_choice_1">\(K=\frac{1}{2}mv^2\)</label><br/>
+                {{forms.form1.choice.2}}
+                <label for="id_choice_2">\(K=mv \)</label><br/>
+                {{forms.form1.choice.3}}
+                <label for="id_choice_3">None of the above</label><br/>
+                {% csrf_token %}
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn1" form="question1" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 2 -->
+<div class="wrapper pretest" id="q2-container" style="display: none;">
+    <div class="hdr">
+        <h2>What is the definition of gravitational potential energy (\(U_g\))? Where \(m\) is mass, \(g\) is the gravitational constant, \(h\) is height, and \(v\) is speed</h2>
+    </div> 
+    <div class="ctr quiz">
+        <div>               
+            <form method="POST" id="question2">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form2.choice.0}}
+                    <label for="q2c1">\(U_g = mgh^2\)</label><br/>
+                    {{forms.form2.choice.1}}
+                    <label for="q2c2">\(U_g = mhv\)</label><br/>
+                    {{forms.form2.choice.2}}
+                    <label for="q2c3">\(U_g = mgh\)</label><br/>
+                    {{forms.form2.choice.3}}
+                    <label for="q2c4">None of the above</label><br/>
+                    {% csrf_token %}
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn2" form="question2" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 3 -->
+<div class="wrapper pretest" id="q3-container" style="display: none;">
+    <div class="hdr">
+        <h2>Which of the following is the definition of work (\(W\))? Where \(m\) is mass, \(v\) is speed, \(\Delta x\) is the magnitude of displacement, \(g\) is the gravitational constant, \(h\) is height, and \(F\) is the net force</h2>
+    </div> 
+    <div class="ctr quiz">
+        <div>               
+            <form method="POST" id="question3">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form3.choice.0}}
+                    <label for="q3c1">\(W = F\Delta x\)</label><br/>
+                    {{forms.form3.choice.1}}
+                    <label for="q3c2">\(W = Fv\)</label><br/>
+                    {{forms.form3.choice.2}}
+                    <label for="q3c3">\(W=Fg\Delta x\)</label><br/>
+                    {{forms.form3.choice.3}}
+                    <label for="q3c4">None of the above</label><br/>
+                    {% csrf_token %}
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn3" form="question3" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 4 -->
+<div class="wrapper pretest" id="q4-container" style="display: none;">
+    <div class="hdr">
+        <h2>Conservation of energy implies which of the following?</h2>
+    </div> 
+    <div class="ctr quiz">
+        <div>               
+            <form method="POST" id="question4">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form4.choice.0}}
+                    <label for="q4c1">A car moving at speed \(v\) will move at speed \(v\) forever</label><br/>
+                    {{forms.form4.choice.1}}
+                    <label for="q4c2">A falling ball speeds up as it falls</label><br/>
+                    {{forms.form4.choice.2}}
+                    <label for="q4c3">A block sliding on a rough floor will warm up the floor as it slows down</label><br/>
+                    {{forms.form4.choice.3}}
+                    <label for="q4c4">None of the above</label><br/>
+                    {{forms.form4.choice.4}}
+                    <label for="q4c5">More than one is correct</label>
+                    {% csrf_token %}
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn4" form="question4" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 4 -->
+<!-- <div class="wrapper pretest" id="q4-container" style="display: none;">
+    <div class="hdr">
+        <h5>A \( 1 kg \) block is pushed down and forward (in the direction of the block's motion) at an angle \( \theta \) with 
+            the floor. Assuming that the floor has some roughness such that there is frictional force between the block and floor, 
+            which is the correct force diagram?</h5>
+    </div> 
+    <div class="ctr">         
+            <form method="POST" id="question4">
+                <div class="ctr-container">
+                    <div>{{forms.form4.choice.0}}</div>
+                    <div>{{forms.form4.choice.1}}</div>
+                    <div>{{forms.form4.choice.2}}</div>    
+                    <div>{{forms.form4.choice.3}}</div>
+                    <div><img src="{% static "IMG/Pre/pre4f1.svg"%}"></div>
+                    <div><img src="{% static "IMG/Pre/pre4f2.svg"%}"></div>
+                    <div><img src="{% static "IMG/Pre/pre4f3.svg"%}"></div>
+                    <div><img src="{% static "IMG/Pre/pre4f4.svg"%}"></div> 
+                </div>
+            </form>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn4" form="question4" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div> -->
+
+
+<!-- Question 5 -->
+<div class="wrapper pretest" id="q5-container" style="display: none;">
+    <div class="hdr">
+        <h2> If I do work by applying force \(\vec{F}\) on a sliding block, initially moving with velocity \(\vec{v}\) what will happen to the speed of the block?</h2>
+    </div> 
+    <div class="ctr quiz">
+        <div>               
+            <form method="POST" id="question5">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form5.choice.0}}
+                    <label for="q5c1">It will increase</label><br/>
+                    {{forms.form5.choice.1}}
+                    <label for="q5c1">It will decrease</label><br/>
+                    {{forms.form5.choice.2}}
+                    <label for="q5c3">It will stay the same</label><br/>
+                    {{forms.form5.choice.3}}
+                    <label for="q5c4">It will depend on \(\vec{v}\) <strong>and</strong> \(\vec{F}\)</label><br/>
+                    {% csrf_token %}
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn5" form="question5" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 6 -->
+<div class="wrapper pretest" id="q6-container" style="display: none;">
+    <div class="hdr">
+        <h2>If an object has kinetic energy \(K\) when travelling at speed \(v\), what will its kinetic energy \(K'\) be when travelling at a speed \(2v\)?</h2>
+    </div> 
+    <div class="ctr quiz">         
+            <form method="POST" id="question6">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form6.choice.0}}
+                    <label for="q6c1">\(K'=2K\)</label><br/>
+                    {{forms.form6.choice.1}}
+                    <label for="q6c2">\(K'=K\)</label><br/>
+                    {{forms.form6.choice.2}}
+                    <label for="q6c3">\(K'=4K\)</label><br/>    
+                    {{forms.form6.choice.3}}
+                    <label for="q6c4">\(K'=\frac{1}{2}K\)</label><br/>
+                    {{forms.form6.choice.4}}
+                    <label for="q6c5">More than one is possible</label>
+                </div>
+            </form>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn6" form="question6" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 7 -->
+<div class="wrapper pretest" id="q7-container" style="display: none;">
+    <div class="hdr">
+        <h4>An elevator is moving upwards at constant speed. What is the sign (\(+/-\)) of the work being done by the cable?</h4>
+    </div> 
+    <div class="ctr quiz">
+        <div><img src="{% static "IMG/energy/elevator.svg"%}"/></div>
+        <div>               
+            <form method="POST" id="question7">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form7.choice.0}}
+                    <label for="q7c1"> Positive</label><br/>
+                    {{forms.form7.choice.1}}
+                    <label for="q7c2"> Negative</label><br/>
+                    {{forms.form7.choice.2}}
+                    <label for="q7c3"> Zero</label><br/>
+                    {{forms.form7.choice.3}}
+                    <label for="q7c4">More than is possible</label><br/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn7" form="question7" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 8 -->
+<div class="wrapper pretest" id="q8-container" style="display: none;">
+    <div class="hdr">
+        <h3> A brick is released from my hand. After falling \(3m\), what is the speed of the brick?</h3>
+    </div> 
+    <div class="ctr quiz">
+        <div><img src="{% static "IMG/energy/brick.svg"%}"/></div>
+        <div>               
+            <form method="POST" id="question8">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form8.choice.0}}
+                    <label for="q8c1">\(v = 29.4 m/s \)</label><br/>
+                    {{forms.form8.choice.1}}
+                    <label for="q8c1">\(v=7.7 m/s\)</label><br/>
+                    {{forms.form8.choice.2}}
+                    <label for="q8c3">\(v = 5.4 m/s\)</label><br/>
+                    {{forms.form8.choice.3}}
+                    <label for="q8c4">\(v=3m/s\)</label><br/>
+                    {{forms.form8.choice.4}}
+                    <label for="q8c5">None of the above</label><br/>
+                    {% csrf_token %}
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn8" form="question8" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Question 9 -->
+<div class="wrapper pretest" id="q9-container">
+    <div class="hdr">
+        <h3> A block is initially moving at \(v=4 m/s\) when it encounters a rough patch in the floor (\(\mu_k = 0.3\)). Assuming \(g = 9.8m/s^2\) in what distance \(d\) will the block come to rest?</h3>
+    </div> 
+    <div class="ctr quiz">
+        <div>               
+            <form method="POST" id="question9">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form9.choice.0}}
+                    <label for="q9c1">\(d = 3.0 m \)</label><br/>
+                    {{forms.form9.choice.1}}
+                    <label for="q9c1">\( d = 1.5 m \)</label><br/>
+                    {{forms.form9.choice.2}}
+                    <label for="q9c3">\( d = 0.7 m \)</label><br/>
+                    {{forms.form9.choice.3}}
+                    <label for="q9c4">None of the above</label><br/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn9" form="question9" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Question 10 -->
+<div class="wrapper pretest" id="q10-container" style="display: none;">
+    <div class="hdr">
+        <h3> A crate slides down a \(h = 2m\) tall ramp, what is its speed at the bottom? Assume \(g=9.8m/s^2\)</h3>
+    </div> 
+    <div class="ctr quiz">
+        <div><img style="width: 35vw" src="{% static "IMG/energy/blockramp.svg"%}"/></div>
+        <div>               
+            <form method="POST" id="question10">
+                <p>Please select a choice below</p>
+                <div>
+                    {{forms.form10.choice.0}}
+                    <label for="q10c1">\(v = 39.2 m/s \)</label><br/>
+                    {{forms.form10.choice.1}}
+                    <label for="q10c1">\(v=6.3 m/2 \)</label><br/>
+                    {{forms.form10.choice.2}}
+                    <label for="q10c3">\(v=4.4 m/s \)</label><br/>
+                    {{forms.form10.choice.3}}
+                    <label for="q10c4">None of the above</label><br/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="ftr">
+        <div id="button-box">
+            <button id="btn10" form="question10" id="btn-form10" class="btn primary reduced-vis" type="submit">Submit</button>
+        </div>
+    </div>
+</div>
+
+<!-- Calibration -->
+<div id="calibration" class="info wrapper" style="display:none">
+    <div class="hdr"></div>
+    <div class="ctr" style="text-align: center;">
+        <h4>
+            Please tell the research assistant that it is time to calibrate the system. Thanks for your patience!
+        </h4>
+    </div>
+    <div class="ftr">
+        <button id="cal" class="btn primary reduced-vis">Next</button>
+    </div>
+</div>
+
+<script src="{% static "JS/pretest.js"%}"></script>
+
+
+
+{% endblock %}

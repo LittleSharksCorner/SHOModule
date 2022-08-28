@@ -1,0 +1,83 @@
+#energy-header{
+    margin: 0;
+}
+
+#problem-text{
+    font-size: 1.3vw; /*vw= width of the screen, 2vw = 2% of the screen's width*/
+    justify-content: space-evenly;
+    position: absolute;
+    top: 2vh; /*vh= height of the screen*/
+    left: 3vw;
+    right: 3vw;
+    margin: 0;
+}
+
+#problem-img{
+    width: 55vh;
+    position: absolute;
+    top: 19vh;
+    left: 5vw;
+}
+
+#top{
+    font-size: 1.7vw;
+    color: rgb(241, 67, 105); 
+    position: absolute;
+    top: 18vh;
+    left: 22vw;
+} 
+
+
+#process{
+    font-size: 1.7vw;
+    color: rgb(46, 61, 194);
+    position: absolute;
+    top: 25vh;
+    left: 29vw;
+} 
+
+#bottom{
+    font-size: 1.7vw;
+    color: rgb(3, 150, 81);
+    position: absolute;
+    top: 43vh;
+    left: 48vw;
+}
+
+
+#step-1{
+    font-size: 1.3vw;
+    justify-content: center;
+    position: absolute;
+    top: 50vh;
+}
+
+#button-box{
+    display:flexbox;
+    position: absolute;
+    top: 57vh;
+}
+
+/* top | right | bottom | left */
+.buttons{
+    margin: 0 5vw 0 5vw;
+    padding: 0.5vh 2vw 0.5vh 2vw;
+    border-radius: 0.2vw;
+}
+
+#buttonleft{
+    border: none;
+    background-color: rgb(241, 145, 166)
+}
+
+#buttoncenter{
+    border: none;
+    background-color: rgb(118, 126, 201)
+}
+
+#buttonright{
+    border: none;
+    background-color:rgb(103, 199, 154)
+}
+
+
