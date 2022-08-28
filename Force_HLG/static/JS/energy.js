@@ -16,6 +16,7 @@ const playbtn = document.getElementById('playbutton')
 const pausebtn = document.getElementById('pausebutton')
 const replaybtn = document.getElementById('replaybutton')
 const probstatement = document.getElementById('problemstatement')
+const genprobstp1 = document.getElementById('genprob-step1')
 const stp1 = document.getElementById('step-1')
 const stp2 = document.getElementById('step-2')
 const btnleft = document.getElementById('buttonleft')
@@ -24,6 +25,8 @@ const btnright = document.getElementById('buttonright')
 const btnleft1 = document.getElementById('buttonleft1')
 const btncenter1 = document.getElementById('buttoncenter1')
 const btnright1 = document.getElementById('buttonright1')
+
+
 
 
 playbtn.addEventListener('click', ()=>{
@@ -42,10 +45,28 @@ replaybtn.addEventListener('click', ()=>{
 
 probstatement.addEventListener('ended', ()=>{
     stp1.style.opacity=1;
-    btnleft.style.opacity=1;
-    btncenter.style.opacity=1;
-    btnright.style.opacity=1;
+    // btnleft.style.opacity=1;
+    // btncenter.style.opacity=1;
+    // btnright.style.opacity=1;
+    genprobstp1.play()
 })
+
+let tl = anime.timeline({
+    easing:'linear',
+    autoplay: false
+})
+tl.add({
+    targets: "#buttonleft",
+    opacity: 1, 
+    duration: 5
+},2000)
+
+  //Set Interval checks -> 50ms for audio time. 
+  const x = setInterval(function(){
+    let place = genprobstp1.currentTime;
+    //anime timeline syncs animation with audio
+      tl.seek(place*1000);
+  },50);
 
 
 

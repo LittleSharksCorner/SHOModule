@@ -45,6 +45,10 @@
     left: 48vw;
 }
 
+#top, #process, #bottom{
+    opacity: 0
+}
+
 
 /* The steps */
 #step-1{
