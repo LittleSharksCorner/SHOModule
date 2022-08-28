@@ -125,3 +125,33 @@
     top: 57vh;
     opacity: 0;
 }
+
+
+/* The audio buttons */
+#playbutton{
+    width: 1.7vw;
+    position: absolute;
+    top: 33vh;
+    left: 20vh;
+    z-index: 1;
+}
+
+#pausebutton{
+    width: 1.7vw;
+    position: absolute;
+    top: 33vh;
+    left: 25vh;
+    z-index: 1;
+}
+
+#replaybutton{
+    width: 1.7vw;
+    position: absolute;
+    top: 33vh;
+    left: 30vh;
+    z-index: 1;
+}
+
+#playbutton:hover, #pausebutton:hover, #replaybutton:hover{
+    cursor: pointer;
+}
