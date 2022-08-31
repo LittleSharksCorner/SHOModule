@@ -90,37 +90,40 @@
 
 #buttonleft{
     border: none;
-    background-color: rgb(241, 145, 166);
-    left: 5%
+    background-color: #fbaf41;
+    left: 5%;
+    z-index: 1;
 }
 
 #buttoncenter{
     border: none;
-    background-color: rgb(118, 126, 201);
-    left: 40%
+    background-color: #ff7f0a;
+    left: 40%;
+    z-index: 1;
 }
 
 #buttonright{
     border: none;
-    background-color:rgb(103, 199, 154);
-    right: 5%
+    background: color #f00;;
+    right: 5%;
+    z-index: 1;
 }
 
 #buttonleft-1{
     border: none;
-    background-color: rgb(241, 145, 166);
+    background-color: #fbaf41;
     left: 5%
 }
 
 #buttoncenter-1{
     border: none;
-    background-color: rgb(118, 126, 201);
-    left: 40%
+    background-color: #ff7f0a;
+    left: 40%;
 }
 
 #buttonright-1{
     border: none;
-    background-color:rgb(103, 199, 154);
+    background: color #f00;;
     right: 5%
 }
 
@@ -128,6 +131,14 @@
     position: absolute;
     top: 57vh;
     opacity: 0;
+}
+
+#button-step-2{
+    border: none;
+    background-color: #262161;
+    right: 60%;
+    color: white;
+    box-shadow: #fbaf41;
 }
 
 

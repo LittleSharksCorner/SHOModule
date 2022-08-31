@@ -25,6 +25,9 @@ const btnright = document.getElementById('buttonright')
 const btnleft1 = document.getElementById('buttonleft1')
 const btncenter1 = document.getElementById('buttoncenter1')
 const btnright1 = document.getElementById('buttonright1')
+const tp = document.getElementById('top')
+const prs = document.getElementById('process')
+const btt = document.getElementById('bottom')
 
 
 
@@ -59,7 +62,18 @@ tl.add({
     targets: "#buttonleft",
     opacity: 1, 
     duration: 5
-},2000)
+},11000)
+tl.add({
+    targets: "#buttoncenter",
+    opacity: 1, 
+    duration: 5
+},13000)
+tl.add({
+    targets: "#buttonright",
+    opacity: 1, 
+    duration: 5
+},16000)
+
 
   //Set Interval checks -> 50ms for audio time. 
   const x = setInterval(function(){
@@ -68,5 +82,15 @@ tl.add({
       tl.seek(place*1000);
   },50);
 
+btnleft.addEventListener('click',function(){
+    tp.style.opacity=1;
+})
 
+btncenter.addEventListener('click',function(){
+    prs.style.opacity=1;
+})
+
+btnright.addEventListener('click',function(){
+    btt.style.opacity=1;
+})
 
