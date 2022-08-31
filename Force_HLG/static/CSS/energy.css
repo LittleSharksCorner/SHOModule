@@ -83,6 +83,7 @@
 }
 
 #buttonleft,#buttoncenter,#buttonright{
+    font-size:1vw;
     position: absolute;
     top: 57vh;
     opacity: 0;
@@ -91,7 +92,7 @@
 #buttonleft{
     border: none;
     background-color: #fbaf41;
-    left: 5%;
+    left: 10%;
     z-index: 1;
 }
 
@@ -104,8 +105,8 @@
 
 #buttonright{
     border: none;
-    background: color #f00;;
-    right: 5%;
+    background-color: #f00;
+    left: 65%;
     z-index: 1;
 }
 
@@ -128,17 +129,36 @@
 }
 
 #buttonleft-1,#buttoncenter-1,#buttonright-1{
+    font-size: 1vw;
     position: absolute;
     top: 57vh;
     opacity: 0;
 }
 
-#button-step-2{
+#button-step-1{
+    font-size:1vw;
     border: none;
     background-color: #262161;
-    right: 60%;
+    position: absolute;
+    top: 57vh;
+    left: 2vw;
     color: white;
-    box-shadow: #fbaf41;
+    margin: 0 0 0;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    border-radius: 0.2vw;
+}
+
+#button-step-2{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 57vh;
+    left: 78vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
 }
 
 
