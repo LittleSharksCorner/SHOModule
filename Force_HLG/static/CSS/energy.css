@@ -23,7 +23,7 @@
 /* The explanation */
 #top{
     font-size: 1.7vw;
-    color: rgb(241, 67, 105); 
+    color:#fbaf41; 
     position: absolute;
     top: 18vh;
     left: 22vw;
@@ -31,7 +31,7 @@
 
 #process{
     font-size: 1.7vw;
-    color: rgb(46, 61, 194);
+    color: #ff7f0a;
     position: absolute;
     top: 25vh;
     left: 29vw;
@@ -39,7 +39,7 @@
 
 #bottom{
     font-size: 1.7vw;
-    color: rgb(3, 150, 81);
+    color: #f00;
     position: absolute;
     top: 43vh;
     left: 48vw;
@@ -64,6 +64,24 @@
     justify-content: center;
     position: absolute;
     top: 50vh;
+    opacity: 0;
+}
+
+
+/* The equation */
+#plus{
+    font-size: 3vw;
+    position: absolute;
+    top: 55vh;
+    left: 29vw;
+    opacity: 0;
+}
+
+#equal{
+    font-size: 3vw;
+    position: absolute;
+    top: 54.5vh;
+    left: 54.5vw;
     opacity: 0;
 }
 
@@ -99,7 +117,7 @@
 #buttoncenter{
     border: none;
     background-color: #ff7f0a;
-    left: 40%;
+    left: 37%;
     z-index: 1;
 }
 
@@ -113,19 +131,19 @@
 #buttonleft-1{
     border: none;
     background-color: #fbaf41;
-    left: 5%
+    left: 10%
 }
 
 #buttoncenter-1{
     border: none;
     background-color: #ff7f0a;
-    left: 40%;
+    left: 35%;
 }
 
 #buttonright-1{
     border: none;
-    background: color #f00;;
-    right: 5%
+    background-color: #f00;;
+    left:64%;
 }
 
 #buttonleft-1,#buttoncenter-1,#buttonright-1{
@@ -140,12 +158,13 @@
     border: none;
     background-color: #262161;
     position: absolute;
-    top: 57vh;
-    left: 2vw;
+    top: 20vh;
+    left: 78vw;
     color: white;
     margin: 0 0 0;
     padding: 0.2vh 1vw 0.2vh 1vw;
     border-radius: 0.2vw;
+    opacity:0;
 }
 
 #button-step-2{
@@ -153,12 +172,27 @@
     border: none;
     background-color: #262161;
     position: absolute;
-    top: 57vh;
+    top: 27vh;
     left: 78vw;
     color: white;
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
+    opacity:0;
+}
+
+#button-step-3{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 34vh;
+    left: 78vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
+    opacity:0;
 }
 
 

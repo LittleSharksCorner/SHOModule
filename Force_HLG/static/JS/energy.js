@@ -22,12 +22,17 @@ const stp2 = document.getElementById('step-2')
 const btnleft = document.getElementById('buttonleft')
 const btncenter = document.getElementById('buttoncenter')
 const btnright = document.getElementById('buttonright')
-const btnleft1 = document.getElementById('buttonleft1')
-const btncenter1 = document.getElementById('buttoncenter1')
-const btnright1 = document.getElementById('buttonright1')
+const btnleft1 = document.getElementById('buttonleft-1')
+const btncenter1 = document.getElementById('buttoncenter-1')
+const btnright1 = document.getElementById('buttonright-1')
 const tp = document.getElementById('top')
 const prs = document.getElementById('process')
 const btt = document.getElementById('bottom')
+const pl = document.getElementById('plus')
+const eq = document.getElementById('equal')
+const bttstep1 = document.getElementById('button-step-1')
+const bttstep2 = document.getElementById('button-step-2')
+const bttstep3 = document.getElementById('button-step-3')
 
 
 
@@ -47,10 +52,11 @@ replaybtn.addEventListener('click', ()=>{
 })
 
 probstatement.addEventListener('ended', ()=>{
+    bttstep1.style.opacity=1;
+})
+
+bttstep1.addEventListener('click', ()=>{
     stp1.style.opacity=1;
-    // btnleft.style.opacity=1;
-    // btncenter.style.opacity=1;
-    // btnright.style.opacity=1;
     genprobstp1.play()
 })
 
@@ -62,7 +68,7 @@ tl.add({
     targets: "#buttonleft",
     opacity: 1, 
     duration: 5
-},11000)
+},10000)
 tl.add({
     targets: "#buttoncenter",
     opacity: 1, 
@@ -94,3 +100,39 @@ btnright.addEventListener('click',function(){
     btt.style.opacity=1;
 })
 
+genprobstp1.addEventListener('ended', ()=>{
+    bttstep2.style.opacity = 1;
+})
+
+bttstep2.addEventListener('click', ()=>{
+    stp1.style.opacity=0;
+    btnleft.style.opacity=0;
+    btncenter.style.opacity=0;
+    btnright.style.opacity=0;
+    stp2.style.opacity=1;
+    btnleft1.style.opacity=1;
+    btncenter1.style.opacity=1;
+    btnright1.style.opacity=1;
+    pl.style.opacity=1;
+    eq.style.opacity=1;
+    bttstep1.style.opacity=1;
+    bttstep2.style.opacity=0;
+    bttstep3.stylte.opacity=1;
+})
+
+bttstep1.addEventListener('click', ()=>{
+    stp1.style.opacity=1;
+    btnleft.style.opacity=1;
+    btncenter.style.opacity=1;
+    btnright.style.opacity=1;
+    stp2.style.opacity=1;
+    stp2.style.opacity=0;
+    btnleft1.style.opacity=0;
+    btncenter1.style.opacity=0;
+    btnright1.style.opacity=0;
+    pl.style.opacity=0;
+    eq.style.opacity=0;
+    bttstep1.style.opacity=0;
+    bttstep2.style.opacity=1;
+    // bttstep3.style.opacity=1;
+})
