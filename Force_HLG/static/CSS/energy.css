@@ -73,7 +73,7 @@
     font-size: 3vw;
     position: absolute;
     top: 55vh;
-    left: 29vw;
+    left: 54.5vw;
     opacity: 0;
 }
 
@@ -81,7 +81,23 @@
     font-size: 3vw;
     position: absolute;
     top: 54.5vh;
-    left: 54.5vw;
+    left: 29vw;
+    opacity: 0;
+}
+
+#plus-1{
+    font-size: 3vw;
+    position: absolute;
+    top: 55vh;
+    left: 50vw;
+    opacity: 0;
+}
+
+#equal-1{
+    font-size: 3vw;
+    position: absolute;
+    top: 54.5vh;
+    left: 33vw;
     opacity: 0;
 }
 
@@ -151,6 +167,31 @@
     position: absolute;
     top: 57vh;
     opacity: 0;
+}
+
+#buttonleft-2{
+    border: none;
+    background-color: #fbaf41;
+    left:18%
+}
+
+#buttoncenter-2{
+    border: none;
+    background-color: #ff7f0a;
+    left: 41%;
+}
+
+#buttonright-2{
+    border: none;
+    background-color: #f00;
+    left: 60%;
+}
+
+#buttonleft-2, #buttoncenter-2, #buttonright-2{
+    font-size: 1vw;
+    position: absolute;
+    top: 57vh;
+    opacity:0;
 }
 
 #button-step-1{
