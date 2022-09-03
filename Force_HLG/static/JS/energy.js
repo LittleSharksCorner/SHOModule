@@ -18,10 +18,14 @@ const replaybtn = document.getElementById('replaybutton')
 const probstatement = document.getElementById('problemstatement')
 const genprobstp1 = document.getElementById('genprob-step1')
 const genprobstp2 = document.getElementById('genprob-step2')
+const genprobstp3 = document.getElementById('genprob-step3')
+const genprobstp4 = document.getElementById('genprob-step4')
+const genprobstp42 = document.getElementById('genprob-step4-2')
 const stp1 = document.getElementById('step-1')
 const stp2 = document.getElementById('step-2')
 const stp3 = document.getElementById('step-3')
 const stp4 = document.getElementById('step-4')
+const note = document.getElementById('note')
 const btnleft = document.getElementById('buttonleft')
 const btncenter = document.getElementById('buttoncenter')
 const btnright = document.getElementById('buttonright')
@@ -125,6 +129,13 @@ bttstep2.addEventListener('click', ()=>{
     genprobstp2.play();
 })
 
+bttstep3.addEventListener('click', ()=>{
+    genprobstp3.play();
+})
+
+bttstep4.addEventListener('click',()=>{
+    genprobstp4.play();
+})
 
 bttstep1.addEventListener('click', ()=>{        //STEP 1
     stp1.style.opacity=1;
@@ -150,13 +161,15 @@ bttstep1.addEventListener('click', ()=>{        //STEP 1
     albtn2.style.opacity=0;
     albtn3.style.opacity=0;
     albtn4.style.opacity=0;
+    bttstep1.style.opacity=0;
+    bttstep2.style.opacity=0;
+    bttstep3.style.opacity=0;
+    bttstep4.style.opacity=0;
+    note.style.opacity=0;
 })
 
 genprobstp1.addEventListener('ended',()=>{
-    bttstep1.style.opacity=0;
     bttstep2.style.opacity=1;
-    bttstep3.style.opacity=0;
-    bttstep4.style.opacity=0;
 })
 
 bttstep2.addEventListener('click', ()=>{        //STEP 2
@@ -186,13 +199,16 @@ bttstep2.addEventListener('click', ()=>{        //STEP 2
     albtn2.style.opacity=0;
     albtn3.style.opacity=0;
     albtn4.style.opacity=0;
+    bttstep1.style.opacity=0;
+    bttstep2.style.opacity=0;
+    bttstep3.style.opacity=0;
+    bttstep4.style.opacity=0;    
+    note.style.opacity=0;
 })
 
 genprobstp2.addEventListener('ended',()=>{
     bttstep1.style.opacity=1;
-    bttstep2.style.opacity=0;
     bttstep3.style.opacity=1;
-    bttstep4.style.opacity=0;
 })
 
 bttstep3.addEventListener('click', ()=>{           //STEP 3
@@ -223,11 +239,16 @@ bttstep3.addEventListener('click', ()=>{           //STEP 3
     albtn3.style.opacity=0;
     albtn4.style.opacity=0;
     bttstep1.style.opacity=0;
-    bttstep2.style.opacity=1;
+    bttstep2.style.opacity=0;
     bttstep3.style.opacity=0;
-    bttstep4.style.opacity=1;
+    bttstep4.style.opacity=0;
+    note.style.opacity=0;
 })
 
+genprobstp3.addEventListener('ended',()=>{
+    bttstep2.style.opacity=1;
+    bttstep4.style.opacity=1;
+})
 
 bttstep4.addEventListener('click', ()=>{        //STEP 4
     stp1.style.opacity=0;                   // Step 1 content
@@ -251,12 +272,21 @@ bttstep4.addEventListener('click', ()=>{        //STEP 4
     eq1.style.opacity=0;
     stp4.style.opacity=1;                 // Step 4 content
     al1.style.opacity=1;
+    al2.style.opacity=0;
+    al3.style.opacity=0;
+    al4.style.opacity=0;
+    al5.style.opacity=0;
     albtn1.style.opacity=1;
+    albtn2.style.opacity=0;
+    albtn3.style.opacity=0;
+    albtn4.style.opacity=0;
     bttstep1.style.opacity=0;
     bttstep2.style.opacity=0;
-    bttstep3.style.opacity=1;
+    bttstep3.style.opacity=0;
     bttstep4.style.opacity=0;
+    note.style.opacity=0;
 })
+
 
 albtn1.addEventListener('click', ()=>{
     albtn1.style.opacity=0;
@@ -279,6 +309,18 @@ albtn3.addEventListener('click',()=>{
 albtn4.addEventListener('click',()=>{
     albtn4.style.opacity=0;
     al5.style.opacity=1;
+    note.style.opacity=1;
+})
+
+note.addEventListener('click', ()=>{
+    genprobstp42.play();
+})
+
+genprobstp42.addEventListener('ended',()=>{
+    bttstep1.style.opacity=1;
+    bttstep2.style.opacity=1;
+    bttstep3.style.opacity=1;
+    bttstep4.style.opacity=1;
 })
 
 

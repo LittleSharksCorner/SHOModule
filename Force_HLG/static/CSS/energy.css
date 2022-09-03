@@ -310,6 +310,20 @@
     opacity:0;
 }
 
+#note{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 48vh;
+    left: 78vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
+    opacity:0;
+}
+
 #al-button-1{
     font-size: 1vw;
     border: none;
