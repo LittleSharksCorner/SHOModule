@@ -67,6 +67,22 @@
     opacity: 0;
 }
 
+#step-3{
+    font-size: 1.3vw;
+    justify-content: center;
+    position: absolute;
+    top: 50vh;
+    opacity:0;
+}
+
+#step-4{
+    font-size:1.3vw;
+    position: absolute;
+    top: 15vh;
+    left: 30vw;
+    opacity:0;
+}
+
 
 /* The equation */
 #plus{
@@ -99,6 +115,50 @@
     top: 54.5vh;
     left: 33vw;
     opacity: 0;
+}
+
+#algebra-1{
+    font-size: 1.3vw;
+    position: absolute;
+    top: 16vh;
+    left: 55vw;
+    opacity:1;
+}
+
+#algebra-2{
+    font-size:1.3vw;
+    position: absolute;
+    top: 21vh;
+    left: 51.6vw;
+    opacity:1;
+}
+
+#algebra-3{
+    font-size:1.3vw;
+    position: absolute;
+    top: 26vh;
+    left: 48.4vw;
+    opacity:1;
+}
+
+#algebra-4{
+    font-size:1.3vw;
+    position: absolute;
+    top: 31vh;
+    left: 51.6vw;
+    opacity:1;
+}
+
+#algebra-5{
+    font-size:1.3vw;
+    position: absolute;
+    top: 36vh;
+    left: 51vw;
+    opacity:1;
+}
+
+#algebra-1, #algebra-2, #algebra-3, #algebra-4, #algebra-5{
+    opacity:0;
 }
 
 
@@ -236,6 +296,79 @@
     opacity:0;
 }
 
+#button-step-4{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 41vh;
+    left: 78vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
+    opacity:0;
+}
+
+#al-button-1{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 21vh;
+    left: 57.5vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
+    opacity:1;
+}
+
+#al-button-2{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 26vh;
+    left: 57.5vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
+    opacity:1;
+}
+
+#al-button-3{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 31vh;
+    left: 57.5vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
+    opacity:1;
+}
+
+#al-button-4{
+    font-size: 1vw;
+    border: none;
+    background-color: #262161;
+    position: absolute;
+    top: 36vh;
+    left: 57.5vw;
+    color: white;
+    padding: 0.2vh 1vw 0.2vh 1vw;
+    margin: 0 0 0;
+    border-radius: 0.2vw;
+    opacity:1;
+}
+
+#al-button-1, #al-button-2, #al-button-3, #al-button-4{
+    opacity:0;
+}
 
 /* The audio buttons */
 #playbutton{

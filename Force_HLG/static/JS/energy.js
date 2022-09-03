@@ -20,6 +20,8 @@ const genprobstp1 = document.getElementById('genprob-step1')
 const genprobstp2 = document.getElementById('genprob-step2')
 const stp1 = document.getElementById('step-1')
 const stp2 = document.getElementById('step-2')
+const stp3 = document.getElementById('step-3')
+const stp4 = document.getElementById('step-4')
 const btnleft = document.getElementById('buttonleft')
 const btncenter = document.getElementById('buttoncenter')
 const btnright = document.getElementById('buttonright')
@@ -39,6 +41,16 @@ const eq1 = document.getElementById('equal-1')
 const bttstep1 = document.getElementById('button-step-1')
 const bttstep2 = document.getElementById('button-step-2')
 const bttstep3 = document.getElementById('button-step-3')
+const bttstep4 = document.getElementById('button-step-4')
+const al1 = document.getElementById('algebra-1')
+const al2 = document.getElementById('algebra-2')
+const al3 = document.getElementById('algebra-3')
+const al4 = document.getElementById('algebra-4')
+const al5 = document.getElementById('algebra-5')
+const albtn1 = document.getElementById('al-button-1')
+const albtn2 = document.getElementById('al-button-2')
+const albtn3 = document.getElementById('al-button-3')
+const albtn4 = document.getElementById('al-button-4')
 
 
 
@@ -62,7 +74,6 @@ probstatement.addEventListener('ended', ()=>{
 })
 
 bttstep1.addEventListener('click', ()=>{
-    stp1.style.opacity=1;
     genprobstp1.play();
 })
 
@@ -111,56 +122,163 @@ genprobstp1.addEventListener('ended', ()=>{
 })
 
 bttstep2.addEventListener('click', ()=>{
-    stp2.style.opacity=1;
     genprobstp2.play();
 })
 
 
-bttstep3.addEventListener('click', ()=>{
-    stp1.style.opacity=0;
-    btnleft.style.opacity=0;
-    btncenter.style.opacity=0;
-    btnright.style.opacity=0;
-    stp2.style.opacity=0;
-    btnleft1.style.opacity=0;
+bttstep1.addEventListener('click', ()=>{        //STEP 1
+    stp1.style.opacity=1;
+    stp2.style.opacity=0;                // step 2 content
+    btnleft1.style.opacity=0;   
     btncenter1.style.opacity=0;
     btnright1.style.opacity=0;
-    btnleft2.style.opacity=1;
-    btncenter2.style.opacity=1;
-    btnright2.style.opacity=1;
     pl.style.opacity=0;
     eq.style.opacity=0;
-    pl1.style.opacity=1;
-    eq1.style.opacity=1;
-    bttstep1.style.opacity=1;
-    bttstep2.style.opacity=1;
-    bttstep3.style.opacity=0;
+    stp3.style.opacity=0;                  // step 3 content
+    btnleft2.style.opacity=0;
+    btncenter2.style.opacity=0;
+    btnright2.style.opacity=0;
+    pl1.style.opacity=0;
+    eq1.style.opacity=0;
+    stp4.style.opacity=0;                 // Step 4 content
+    al1.style.opacity=0;
+    al2.style.opacity=0;
+    al3.style.opacity=0;
+    al4.style.opacity=0;
+    al5.style.opacity=0;
+    albtn1.style.opacity=0;
+    albtn2.style.opacity=0;
+    albtn3.style.opacity=0;
+    albtn4.style.opacity=0;
 })
 
-
-bttstep1.addEventListener('click', ()=>{
-    stp2.style.opacity=0;
-    btnleft1.style.opacity=0;
-    btncenter1.style.opacity=0;
-    btnright1.style.opacity=0;
-    pl.style.opacity=0;
-    eq.style.opacity=0;
+genprobstp1.addEventListener('ended',()=>{
     bttstep1.style.opacity=0;
     bttstep2.style.opacity=1;
     bttstep3.style.opacity=0;
+    bttstep4.style.opacity=0;
 })
 
-bttstep2.addEventListener('click', ()=>{
-    stp1.style.opacity=0;
+bttstep2.addEventListener('click', ()=>{        //STEP 2
+    stp1.style.opacity=0;               //step 1 content
     btnleft.style.opacity=0;
     btncenter.style.opacity=0;
     btnright.style.opacity=0;
-    btnleft1.style.opacity=1;
+    stp2.style.opacity=1;               //step 2 content
+    btnleft1.style.opacity=1;           
     btncenter1.style.opacity=1;
     btnright1.style.opacity=1;
     pl.style.opacity=1;
     eq.style.opacity=1;
+    stp3.style.opacity=0;               //step 3 content
+    btnleft2.style.opacity=0;
+    btncenter2.style.opacity=0;
+    btnright2.style.opacity=0;
+    pl1.style.opacity=0;
+    eq1.style.opacity=0;
+    stp4.style.opacity=0;              // Step 4 content
+    al1.style.opacity=0;
+    al2.style.opacity=0;
+    al3.style.opacity=0;
+    al4.style.opacity=0;
+    al5.style.opacity=0;
+    albtn1.style.opacity=0;
+    albtn2.style.opacity=0;
+    albtn3.style.opacity=0;
+    albtn4.style.opacity=0;
+})
+
+genprobstp2.addEventListener('ended',()=>{
     bttstep1.style.opacity=1;
     bttstep2.style.opacity=0;
     bttstep3.style.opacity=1;
+    bttstep4.style.opacity=0;
 })
+
+bttstep3.addEventListener('click', ()=>{           //STEP 3
+    stp1.style.opacity=0;                   //step 1 content
+    btnleft.style.opacity=0;
+    btncenter.style.opacity=0;
+    btnright.style.opacity=0;
+    stp2.style.opacity=0;                   //step 2 content
+    btnleft1.style.opacity=0;
+    btncenter1.style.opacity=0;
+    btnright1.style.opacity=0;
+    pl.style.opacity=0;
+    eq.style.opacity=0;
+    stp3.style.opacity=1;                   //step 3 content
+    btnleft2.style.opacity=1;
+    btncenter2.style.opacity=1;
+    btnright2.style.opacity=1;
+    pl1.style.opacity=1;
+    eq1.style.opacity=1;
+    stp4.style.opacity=0;                   //step 4 content
+    al1.style.opacity=0;
+    al2.style.opacity=0;
+    al3.style.opacity=0;
+    al4.style.opacity=0;
+    al5.style.opacity=0;
+    albtn1.style.opacity=0;
+    albtn2.style.opacity=0;
+    albtn3.style.opacity=0;
+    albtn4.style.opacity=0;
+    bttstep1.style.opacity=0;
+    bttstep2.style.opacity=1;
+    bttstep3.style.opacity=0;
+    bttstep4.style.opacity=1;
+})
+
+
+bttstep4.addEventListener('click', ()=>{        //STEP 4
+    stp1.style.opacity=0;                   // Step 1 content
+    btnleft.style.opacity=0;
+    btncenter.style.opacity=0;
+    btnright.style.opacity=0;
+    tp.style.opacity=0;
+    prs.style.opacity=0;
+    btt.style.opacity=0;
+    stp2.style.opacity=0;                   // Step 2 content
+    btnleft1.style.opacity=0;
+    btncenter1.style.opacity=0;
+    btnright1.style.opacity=0;
+    pl.style.opacity=0;
+    eq.style.opacity=0;
+    stp3.style.opacity=0;                  // step 3 content
+    btnleft2.style.opacity=0;
+    btncenter2.style.opacity=0;
+    btnright2.style.opacity=0;
+    pl1.style.opacity=0;
+    eq1.style.opacity=0;
+    stp4.style.opacity=1;                 // Step 4 content
+    al1.style.opacity=1;
+    albtn1.style.opacity=1;
+    bttstep1.style.opacity=0;
+    bttstep2.style.opacity=0;
+    bttstep3.style.opacity=1;
+    bttstep4.style.opacity=0;
+})
+
+albtn1.addEventListener('click', ()=>{
+    albtn1.style.opacity=0;
+    al2.style.opacity=1;
+    albtn2.style.opacity=1;
+})
+
+albtn2.addEventListener('click',()=>{
+    albtn2.style.opacity=0;
+    al3.style.opacity=1;
+    albtn3.style.opacity=1;
+})
+
+albtn3.addEventListener('click',()=>{
+    albtn3.style.opacity=0;
+    al4.style.opacity=1;
+    albtn4.style.opacity=1;
+})
+
+albtn4.addEventListener('click',()=>{
+    albtn4.style.opacity=0;
+    al5.style.opacity=1;
+})
+
+
