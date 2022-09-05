@@ -12,11 +12,19 @@
     margin: 0;
 }
 
-#problem-img{
+#genprob_hill{
     width: 55vh;
     position: absolute;
     top: 19vh;
     left: 5vw;
+}
+
+#genprob_sled{
+    width:10vh;
+    position: absolute;
+    top:17.5vh;
+    left: 9.4vw;
+    z-index:1;
 }
 
 
@@ -44,6 +52,16 @@
     top: 43vh;
     left: 48vw;
 }
+
+#notes{
+    font-size: 1.3vw;
+    position: absolute;
+    top: 47.5vh;
+    left:10vw;
+    opacity:0;
+    color:red;
+}
+
 
 #top, #process, #bottom{
     opacity: 0
@@ -153,7 +171,7 @@
     font-size:1.3vw;
     position: absolute;
     top: 36vh;
-    left: 51vw;
+    left: 50.1vw;
     opacity:1;
 }
 

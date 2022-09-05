@@ -38,6 +38,7 @@ const btnright2 = document.getElementById('buttonright-2')
 const tp = document.getElementById('top')
 const prs = document.getElementById('process')
 const btt = document.getElementById('bottom')
+const notes = document.getElementById('notes')
 const pl = document.getElementById('plus')
 const eq = document.getElementById('equal')
 const pl1 = document.getElementById('plus-1')
@@ -55,8 +56,12 @@ const albtn1 = document.getElementById('al-button-1')
 const albtn2 = document.getElementById('al-button-2')
 const albtn3 = document.getElementById('al-button-3')
 const albtn4 = document.getElementById('al-button-4')
+const next = document.getElementById('btn1')
+const back = document.getElementById('btn11')
+const cs1 = document.getElementById('cs1')
+const cs2 = document.getElementById('cs2')
 
-
+let fin
 
 
 playbtn.addEventListener('click', ()=>{
@@ -314,6 +319,7 @@ albtn4.addEventListener('click',()=>{
 
 note.addEventListener('click', ()=>{
     genprobstp42.play();
+    notes.style.opacity=1;
 })
 
 genprobstp42.addEventListener('ended',()=>{
@@ -321,6 +327,13 @@ genprobstp42.addEventListener('ended',()=>{
     bttstep2.style.opacity=1;
     bttstep3.style.opacity=1;
     bttstep4.style.opacity=1;
+    fin = true;
 })
 
 
+next.addEventListener('click', ()=>{
+    if (fin) {
+        cs1.style.display="none";
+        cs2.style.display="grid";
+    }
+})
