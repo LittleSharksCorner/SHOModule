@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from Force_HLG.form import forceForm, forceLogForm, forceMouseForm
 from .form import *
 import pandas as pd
 
@@ -90,46 +89,24 @@ def pretest(request):
 
 # View for forces
 def energy(request):
-    if request.method == "POST":
-        print('post')
-        if request.headers['event'] == 'submission':
-            form = forceForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                form.pageState = 'Question'
-                form.event = 'submission'
-                form.question = 'q1'
-                form.timeStamp = request.headers['datetime']
-                form.save()
-                print("choice_form_saved")
-                return HttpResponse('yay')
-        elif request.headers['event'] == 'page':
-            form = forceLogForm(request.POST)
-            if form.is_valid():
-                form.save(commit=False)
-                form.user = request.user
-                form.save()
-                print(request.user)
-                print('log form saved')
-                return HttpResponse('yay')
+    if request.method == 'POST':
+        form = energyForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user = request.user
+            form.question = request.headers['question']
+            form.timeStamp = request.headers['timeStamp']
+            form.save()
+            return HttpResponse('There was an error')
         else:
-            form = forceMouseForm(request.POST)
-            if form.is_valid():
-                form.save(commit=False)
-                form.user = request.user
-                form.save()
-                return HttpResponse('yay')
-            else:
-                print(form.errors)
-    
+            print(form.errors)
     else:
-        form = forceForm()
-        log = forceLogForm()
-        log2 = forceLogForm()
-        mouse = forceMouseForm()
-        context = {'form':form,'log':log,'mouse':mouse,'log2':log2,'user':request.user}
-        return render(request,'Force_HLG/energy.html',{'context':context})
+        forms = {}
+        forms['form1'] = energyForm()
+        forms['form2'] = energyForm()
+        forms['form3a'] = energyForm()
+        forms['form3b'] = energyForm()
+        return render(request,'Force_HLG/energy.html',{'forms':forms})
 
 # View for pretest
 def posttest(request):

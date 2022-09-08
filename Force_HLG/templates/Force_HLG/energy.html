@@ -203,10 +203,129 @@
 </div>
 
 
-
 <div class="content-stage" id="cs2">
+  <div class="hdr">
+    <h2 id="post-prob-1">
+        Energy Problems - Level 1
+    </h2>
+  </div>
+  <div class="ctr">
+   <!-- Problem statement -->
+  <div id="prob1-box">
+   <h3 id="prob1"> <strong> <span id="problem1"> Problem 1:</span></strong> Given 2 scenarios, a \(\mathbf{15g}\) bullet flying at \(\mathbf{350m/s}\) 
+    and a \(\mathbf{64kg}\) man running at speed \(\mathbf{6m/s}\). Which has the larger kinetic energy? </h3>
+      <!-- <div><img src="{% static "IMG/Pre/pref2.svg"%}"/></div> -->
+        
+        <form method="POST" id="mul-choice-1">
+            <p>Please select a choice below</p>
+            <div>
+                {{forms.form1.choice.0}}
+                <label for="q1c1">The bullet</label><br/>
+                {{forms.form1.choice.1}}
+                <label for="q1c2">The man</label><br/>
+                {{forms.form1.choice.2}}
+                <label for="q1c3">Both have the same kinetic energy</label><br/>
+                {% csrf_token %}
+            </div>
+        </form>
+        <img id="prob_1_bullet" src="{% static "IMG/energy/prob1_bullet.svg"%}"/>
+        <img id="prob_1_runner" src="{% static "IMG/energy/prob1_runner.svg"%}"/>
+        
+        <button id="subbtn1" form="mul-choice-1" class="btn primary" type="submit">Submit</button>
+    </div>
+  <div id="prob2-box">     
+   <h3 id="prob2"> <strong> <span id="problem2"> Problem 2:</span></strong> Which has the larger potential energy, a \(\mathbf{1200kg}\) car on top of 
+    the hill with height of \(\mathbf{5m}\) or a \(\mathbf{950kg}\) roller coaster at the highest point of the 
+    \(\mathbf{8m}\) high track?</h3>
+          
+      <form method="POST" id="mul-choice-2">
+          <p>Please select a choice below</p>
+          <div>
+              {{forms.form2.choice.0}}
+              <label for="q2c1">The car</label><br/>
+              {{forms.form2.choice.1}}
+              <label for="q2c2">The roler coaster</label><br/>
+              {{forms.form2.choice.2}}
+              <label for="q2c3">Both have the same potential energy</label><br/>
+              {% csrf_token %}
+          </div>
+      </form>
+      <button id="subbtn2" form="mul-choice-2" class="btn primary" type="submit">Submit</button>
+  </div>
+  </div>
+  <div class="ftr">
+    <button class="btn primary reduced-vis" id="btn22">Back</button>
+    <button id="btn2" class="btn primary reduced-vis">Next</button>
+  </div>
+</div>
+
+
+
+<div class="content-stage" id="cs3">
+    <div class="hdr">
+      <h2 id="post-prob-2">
+        Energy Problems - Level 2
+      </h2>
+    </div>
+    <div class="ctr">
+      <!-- Problem statement -->
+      <h3 id="prob3"> <strong>Problem 3:</strong> Ben is standing on the rooftop of a \(30m\)-tall building. Ben throws a 
+        tennis ball upward at a speed of \(5m/s\). Given the gravitational constant \(g=9.8 m/s^2\).</h3>
+      <div id="prob3a-box">
+        <h3 id="prob3a">a/ What is the highest point the ball can reach before falling back down?</h3>
+        <form method="POST" id="mul-choice-3-a">
+          <p>Please select a choice below</p>
+          <div>
+            {{forms.form3a.choice.0}}
+            <label for="q3ac1"> \(32.55\) \(m\)</label> <br/>
+            {{forms.form3a.choice.1}}
+            <label for="q3ac2"> \(31.28\) \(m\)</label> <br/>
+            {{forms.form3a.choice.2}}
+            <label for="q3ac3"> \(30.25\) \(m\)</label> <br/>
+            {{forms.form3a.choice.3}}
+            <label for="q3ac4"> None of the above</label> <br/>
+            {% csrf_token %}
+          </div>
+        </form>
+        <button id="subbtn3a" form="mul-choice-3-a" class="btn primary" type="submit">Submit</button>
+      </div>
+      
+      <div id="prob3b-box">
+        <h3 id="prob3b">b/ What is the speed of the ball when it touches the ground?</h3>
+        <form method="POST" id="mul-choice-3-b">
+          <p>Please select a choice below</p>
+          <div>
+            {{forms.form3b.choice.0}}
+            <label for="q3bc1"> \(24.76\) \(m/s\)</label> <br/>
+            {{forms.form3b.choice.1}}
+            <label for="q3bc2"> \(17.51\) \(m/s\)</label> <br/>
+            {{forms.form3b.choice.2}}
+            <label for="q3bc3"> \(17.86\) \(m/s\)</label> <br/>
+            {{forms.form3b.choice.3}}
+            <label for="q3bc4"> None of the above</label> <br/>
+            {% csrf_token %}
+          </div>
+        </form>
+        <button id="subbtn3b" form="mul-choice-3-b" class="btn primary" type="submit">Submit</button>
+      </div>
+
+    </div>
+    <div class="ftr">
+      <button class="btn primary reduced-vis" id="btn33">Back</button>
+      <button id="btn3" class="btn primary reduced-vis">Next</button>
+    <div>
+</div>
+
+
+    <!-- Multiple choice -->
+
+
+
 
 </div>
+
+
+
 
 
 

@@ -24,37 +24,37 @@ class HLG_pretest_page(serializers.ModelSerializer):
 
 ######### HLG Vectors #####################################
 
-class HLG_vectors_answer(serializers.ModelSerializer):
-    class Meta:
-        model = HLG.vectorsEdu
-        fields = "__all__"
+# class HLG_vectors_answer(serializers.ModelSerializer):
+#     class Meta:
+#         model = HLG.vectorsEdu
+#         fields = "__all__"
 
-class HLG_vectors_page(serializers.ModelSerializer):
-    class Meta:
-        model = HLG.vectorsLog
-        fields = "__all__"
+# class HLG_vectors_page(serializers.ModelSerializer):
+#     class Meta:
+#         model = HLG.vectorsLog
+#         fields = "__all__"
 
-class HLG_vectors_mouse(serializers.ModelSerializer):
-    class Meta: 
-        model = HLG.vectorsMouseEvent
-        fields = "__all__"
+# class HLG_vectors_mouse(serializers.ModelSerializer):
+#     class Meta: 
+#         model = HLG.vectorsMouseEvent
+#         fields = "__all__"
 
-########## HLG Forces ######################################
+# ########## HLG Forces ######################################
 
-class HLG_force_answer(serializers.ModelSerializer):
-    class Meta:
-        model = HLG.forceEdu
-        fields = "__all__"
+# class HLG_force_answer(serializers.ModelSerializer):
+#     class Meta:
+#         model = HLG.forceEdu
+#         fields = "__all__"
 
-class HLG_force_page(serializers.ModelSerializer):
-    class Meta:
-        model = HLG.forceLog
-        fields = "__all__"
+# class HLG_force_page(serializers.ModelSerializer):
+#     class Meta:
+#         model = HLG.forceLog
+#         fields = "__all__"
 
-class HLG_force_mouse(serializers.ModelSerializer):
-    class Meta:
-        model = HLG.forceMouseEvent
-        fields = "__all__"
+# class HLG_force_mouse(serializers.ModelSerializer):
+#     class Meta:
+#         model = HLG.forceMouseEvent
+#         fields = "__all__"
 
 ####### HLG PostTest ###########################################
 

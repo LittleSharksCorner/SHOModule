@@ -430,3 +430,141 @@
 #playbutton:hover, #pausebutton:hover, #replaybutton:hover{
     cursor: pointer;
 }
+
+#problem1{
+    color: black;
+}
+
+#problem2{
+    color: black;
+}
+
+#prob1{
+    font-size: 1.3vw;
+    color: #1e0dcf;
+    position: absolute;
+    top: 2vh;
+    left: 1.5vw;
+    right: 43vw;
+}
+
+#prob2{
+    font-size: 1.3vw;
+    color: #b90808;
+    position: absolute;
+    top: 2vh;
+    left: 45vw;
+    right: 1.5vw;
+}
+
+#prob3{
+    font-size: 1.3vw;
+    position: absolute;
+    top: 2vh;
+    left: 1.5vw;
+    right: 1.5vw;
+}
+
+#prob3a{
+    font-size:1.3vw;
+    color: #1e0dcf;
+    position: absolute;
+    top: 11vh;
+    left: 1.5vw;
+    right: 43vw;
+}
+
+#prob3b{
+    font-size: 1.3vw;
+    color: #b90808;
+    position: absolute;
+    top: 11vh;
+    left: 45vw;
+    right: 1.5vw;
+}
+
+#mul-choice-1{
+    font-size: 1.3vw;
+    color: #1e0dcf;
+    position: absolute;
+    top: 40vh;
+    left: 5vw;
+}
+
+#mul-choice-2{
+    font-size:1.3vw;
+    color: #b90808;
+    position: absolute;
+    top: 40vh;
+    left: 48vw;
+}
+
+#mul-choice-3-a{
+    font-size: 1.3vw;
+    color: #1e0dcf;
+    position: absolute;
+    top: 23vh;
+    left: 3vw;
+}
+
+#mul-choice-3-b{
+    font-size: 1.3vw;
+    color: #b90808;
+    position: absolute;
+    top: 23vh;
+    left: 48vw;
+}
+
+#subbtn1{
+    background-color: #262161;
+    color: white;
+    position: absolute;
+    top: 48vh;
+    left: 30vw;
+}
+
+#subbtn2{
+    background-color: #262161;
+    color: white;
+    position: absolute;
+    top: 48vh;
+    left: 75vw;
+}
+
+#subbtn3a{
+    background-color: #262161;
+    color: white;
+    position: absolute;
+    top: 53vh;
+    left: 15vw;
+}
+
+#subbtn3b{
+    background-color: #262161;
+    color: white;
+    position: absolute;
+    top: 53vh;
+    left: 60vw;
+}
+
+#prob2-box{
+    display: none;
+}
+
+#prob3b-box{
+    display: none;
+}
+
+#prob_1_bullet{
+    width: 25vh;
+    position: absolute;
+    top: 20vh;
+    left: 3vw;
+}
+
+#prob_1_runner{
+    width: 30vh;
+    position: absolute;
+    top: 17vh;
+    left: 20vw;
+}

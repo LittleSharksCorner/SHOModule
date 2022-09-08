@@ -58,8 +58,13 @@ const albtn3 = document.getElementById('al-button-3')
 const albtn4 = document.getElementById('al-button-4')
 const next = document.getElementById('btn1')
 const back = document.getElementById('btn11')
+const next2 = document.getElementById('btn2')
+const back2 = document.getElementById('btn22')
+const next3 = document.getElementById('btn3')
+const back3 = document.getElementById('btn33')
 const cs1 = document.getElementById('cs1')
 const cs2 = document.getElementById('cs2')
+const cs3 = document.getElementById('cs3')
 
 let fin
 
@@ -331,9 +336,101 @@ genprobstp42.addEventListener('ended',()=>{
 })
 
 
+// next.addEventListener('click', ()=>{
+//     if (fin) {
+//         cs1.style.display="none";
+//         cs2.style.display="grid";
+//     }
+// })
+
 next.addEventListener('click', ()=>{
-    if (fin) {
         cs1.style.display="none";
         cs2.style.display="grid";
-    }
 })
+
+//jQuery listens for submission of question 1
+$("#mul-choice-1").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'q1','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
+        complete: function(){ 
+            document.getElementById('prob2-box').style.display='block';
+
+        }
+        })
+});
+
+
+
+$("#mul-choice-2").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'q2','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
+        complete: function(){ 
+            cs2.style.display = 'none';
+            cs3.style.display = 'grid';
+
+        }
+        })
+});
+
+
+// next2.addEventListener('click', ()=>{
+//     cs2.style.display="none";
+//     cs3.style.display="grid";
+// })
+
+$("#mul-choice-3-a").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'q3a','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
+        complete: function(){ 
+            document.getElementById('prob3b-box').style.display='block';
+
+        }
+        })
+});
+
+
+$("#mul-choice-3-b").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'q3b','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
+        complete: function(){ 
+            alert('Done for now')
+
+        }
+        })
+});

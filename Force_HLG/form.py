@@ -20,49 +20,58 @@ class pretestMouseForm(forms.ModelForm):
             model = pretestMouseEvent
             fields = ('pageState','event','timeStamp','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
 
-class vectorLogForm(forms.ModelForm):
-        class Meta:
-            model = vectorsLog
-            fields = ('pageState','event','timeStamp')
+# class vectorLogForm(forms.ModelForm):
+#         class Meta:
+#             model = vectorsLog
+#             fields = ('pageState','event','timeStamp')
 
-class vectorForm(forms.ModelForm):
+# class vectorForm(forms.ModelForm):
+#     class Meta:
+#         model = vectorsEdu
+#         fields = ('choice','pageState')
+#     choice_field = [('1',''),
+#     ('2',''),
+#     ('3',''),('4','')]
+#     choice = forms.CharField(widget=forms.RadioSelect(choices=choice_field,attrs={'style':"width:1.2rem; height:1.2rem"}))
+
+# class vectorLogForm(forms.ModelForm):
+#         class Meta:
+#             model = vectorsLog
+#             fields = ('user','pageState','event','videoNumber','videoTime','timeStamp','Wandering')
+
+# class vectorMouseForm(forms.ModelForm):
+#         class Meta:
+#             model = vectorsMouseEvent
+#             fields = ('user','pageState','event','timeStamp','videoNumber','videoTime','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
+
+# class forceForm(forms.ModelForm):
+#     class Meta:
+#         model = forceEdu
+#         fields = ('choice','pageState')
+#     choice_field = [('1',''),
+#     ('2',''),
+#     ('3',''),('4','')]
+#     choice = forms.CharField(widget=forms.RadioSelect(choices=choice_field,attrs={'style':"width:1.2rem; height:1.2rem"}))
+
+# class forceLogForm(forms.ModelForm):
+#         class Meta:
+#             model = forceLog
+#             fields = ('user','pageState','event','videoNumber','timeStamp','videoTime','Wandering')
+
+# class forceMouseForm(forms.ModelForm):
+#         class Meta:
+#             model = forceMouseEvent
+#             fields = ('user','pageState','event','timeStamp','videoNumber','videoTime','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
+
+
+class energyForm(forms.ModelForm):
     class Meta:
-        model = vectorsEdu
-        fields = ('choice','pageState')
+        model = energyEdu
+        fields = ('choice','question','timeStamp')
     choice_field = [('1',''),
     ('2',''),
     ('3',''),('4','')]
     choice = forms.CharField(widget=forms.RadioSelect(choices=choice_field,attrs={'style':"width:1.2rem; height:1.2rem"}))
-
-class vectorLogForm(forms.ModelForm):
-        class Meta:
-            model = vectorsLog
-            fields = ('user','pageState','event','videoNumber','videoTime','timeStamp','Wandering')
-
-class vectorMouseForm(forms.ModelForm):
-        class Meta:
-            model = vectorsMouseEvent
-            fields = ('user','pageState','event','timeStamp','videoNumber','videoTime','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
-
-class forceForm(forms.ModelForm):
-    class Meta:
-        model = forceEdu
-        fields = ('choice','pageState')
-    choice_field = [('1',''),
-    ('2',''),
-    ('3',''),('4','')]
-    choice = forms.CharField(widget=forms.RadioSelect(choices=choice_field,attrs={'style':"width:1.2rem; height:1.2rem"}))
-
-class forceLogForm(forms.ModelForm):
-        class Meta:
-            model = forceLog
-            fields = ('user','pageState','event','videoNumber','timeStamp','videoTime','Wandering')
-
-class forceMouseForm(forms.ModelForm):
-        class Meta:
-            model = forceMouseEvent
-            fields = ('user','pageState','event','timeStamp','videoNumber','videoTime','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
-
 
 class posttestForm(forms.ModelForm):
     class Meta:
