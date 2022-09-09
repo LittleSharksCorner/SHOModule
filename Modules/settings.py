@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'energymodule',
         'USER': 'jeremy',
-        'PASSWORD': 'Eldorado',
+        'PASSWORD': '1195Eldorado',
         'HOST': 'localhost',
         'PORT': '5432',
     }

@@ -12,6 +12,7 @@
 //     })
 // })
 
+
 const playbtn = document.getElementById('playbutton')
 const pausebtn = document.getElementById('pausebutton')
 const replaybtn = document.getElementById('replaybutton')
@@ -68,6 +69,9 @@ const cs3 = document.getElementById('cs3')
 
 let fin
 
+cs2.style.display = 'none'
+cs3.style.display = 'none'
+
 
 playbtn.addEventListener('click', ()=>{
     probstatement.play()
@@ -78,7 +82,7 @@ pausebtn.addEventListener('click', ()=>{
 })
 
 replaybtn.addEventListener('click', ()=>{
-    probstatement.currentTime= 20
+    probstatement.currentTime= 22
     probstatement.play()
     // probstatement.currentTime= probstatement.duration
 })

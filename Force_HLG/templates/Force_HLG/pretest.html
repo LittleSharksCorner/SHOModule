@@ -79,14 +79,30 @@
         <div>               
             <form method="POST" id="question1">
                 <p>Please select a choice below</p>
-                {{forms.form1.choice.0}}
-                <label for="id_choice_0">\(K=\frac{1}{2}mv\)</label><br/>
-                {{forms.form1.choice.1}}
-                <label for="id_choice_1">\(K=\frac{1}{2}mv^2\)</label><br/>
-                {{forms.form1.choice.2}}
-                <label for="id_choice_2">\(K=mv \)</label><br/>
-                {{forms.form1.choice.3}}
-                <label for="id_choice_3">None of the above</label><br/>
+                <ul id="prob1">
+                    <li>
+                        {{forms.form1.choice.0}}
+                        <label for="id_choice_0">\(K=\frac{1}{2}mv\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form1.choice.1}}
+                        <label for="id_choice_1">\(K=\frac{1}{2}mv^2\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form1.choice.2}}
+                        <label for="id_choice_2">\(K=mv \)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form1.choice.3}}
+                        <label for="id_choice_3">None of the above</label><br/>
+                    </li>
+                </ul>
+                <script>
+                        var p1 = document.getElementById('prob1');
+                        for (var i = p1.children.length; i >= 0; i--) {
+                        p1.appendChild(p1.children[Math.random() * i | 0]);
+}
+                </script>
                 {% csrf_token %}
             </form>
         </div>
@@ -107,17 +123,31 @@
         <div>               
             <form method="POST" id="question2">
                 <p>Please select a choice below</p>
-                <div>
-                    {{forms.form2.choice.0}}
-                    <label for="q2c1">\(U_g = mgh^2\)</label><br/>
-                    {{forms.form2.choice.1}}
-                    <label for="q2c2">\(U_g = mhv\)</label><br/>
-                    {{forms.form2.choice.2}}
-                    <label for="q2c3">\(U_g = mgh\)</label><br/>
-                    {{forms.form2.choice.3}}
-                    <label for="q2c4">None of the above</label><br/>
+                <ul id="prob2">
+                    <li>
+                        {{forms.form2.choice.0}}
+                        <label for="q2c1">\(U_g = mgh^2\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form2.choice.1}}
+                        <label for="q2c2">\(U_g = mhv\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form2.choice.2}}
+                        <label for="q2c3">\(U_g = mgh\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form2.choice.3}}
+                        <label for="q2c4">None of the above</label><br/>
+                    </li>
+                </ul>
                     {% csrf_token %}
-                </div>
+                    <script>
+                        var p1 = document.getElementById('prob2');
+                        for (var i = p1.children.length; i >= 0; i--) {
+                        p1.appendChild(p1.children[Math.random() * i | 0]);
+                    }
+                </script>
             </form>
         </div>
     </div>
@@ -137,17 +167,31 @@
         <div>               
             <form method="POST" id="question3">
                 <p>Please select a choice below</p>
-                <div>
-                    {{forms.form3.choice.0}}
-                    <label for="q3c1">\(W = F\Delta x\)</label><br/>
-                    {{forms.form3.choice.1}}
-                    <label for="q3c2">\(W = Fv\)</label><br/>
-                    {{forms.form3.choice.2}}
-                    <label for="q3c3">\(W=Fg\Delta x\)</label><br/>
-                    {{forms.form3.choice.3}}
-                    <label for="q3c4">None of the above</label><br/>
+                <ul id="prob3">
+                    <li>
+                        {{forms.form3.choice.0}}
+                        <label for="q3c1">\(W = F\Delta x\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form3.choice.1}}
+                        <label for="q3c2">\(W = Fv\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form3.choice.2}}
+                        <label for="q3c3">\(W=Fg\Delta x\)</label><br/>
+                    </li>
+                    <li>
+                        {{forms.form3.choice.3}}
+                        <label for="q3c4">None of the above</label><br/>
+                    </li>
+                </ul>
                     {% csrf_token %}
-                </div>
+                    <script>
+                        const p1 = document.getElementById("prob3")
+                        for (let i=p1.children.length; i >= 0;i--){
+                            p1.appendChild(p1.children[Math.random() * i|0]);
+                        }
+                    </script>
             </form>
         </div>
     </div>
