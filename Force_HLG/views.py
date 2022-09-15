@@ -10,9 +10,7 @@ def info(request):
 
 # View for pretest
 def pretest(request):
-    print(request.method)
     if request.method == "POST":
-        print(request.headers['event'])
         if request.headers['event'] == 'submission':
             form = pretestForm(request.POST)
             if form.is_valid():

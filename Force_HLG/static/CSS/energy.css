@@ -1,3 +1,143 @@
+/**************************            CS0           **************************/
+
+#cs0_header{
+    margin:0;
+}
+
+#kinetic_energy, #potential_energy, #work_friction{
+    opacity:1;
+}
+
+#kinetic_energy{
+    width: 25vh;
+    position: absolute;
+    top: 25.5vh;  
+    left: 13vw;
+    z-index:1;
+}
+
+#kinetic_energy:hover, #potential_energy:hover, #work_friction:hover, #con_energy:hover{
+    cursor: pointer;
+}
+
+#def_K{
+    font-size: 1.3vw;
+    position: absolute;
+    top: 22.5vh;
+    left: 8vw;
+    right: 65vw;
+}
+
+#form_K{
+    width: 35vh;
+    position: absolute;
+    top: 33vh;
+    left: 12vw;
+}
+
+#def_K, #form_K, #def_U, #form_U, #def_W, #form_W{
+    opacity:0;
+}
+
+#potential_energy{
+    width: 42vh;
+    position: absolute;
+    top: 27vh;
+    left: 40vw;
+    z-index:1;
+}
+
+#def_U{
+    font-size: 1.3vw;
+    position: absolute;
+    top: 22.5vh;
+    left: 37vw;
+    right: 35vw;
+}
+
+#form_U{
+    width: 37vh;
+    position: absolute;
+    top: 34vh;
+    left: 41vw;
+}
+
+#work_friction{
+    width: 32vh;
+    position: absolute;
+    top: 28.5vh;
+    left: 72vw;
+    z-index:1;
+}
+
+#def_W{
+    font-size: 1.3vw;
+    position: absolute;
+    top: 22.5vh;
+    left: 66vw;
+    right: 7vw;
+    z-index:1;
+}
+
+#form_W{
+    width: 37vh;
+    position: absolute;
+    top: 34vh;
+    left: 70vw;
+}
+
+#con_energy{
+    width: 40vh;
+    position: absolute;
+    top: 68vh;
+    left: 40vw;
+    z-index:1;
+    display:none
+}
+
+#con_img_0:hover, #con_img_1:hover, #con_img_2:hover{
+    cursor:pointer;
+}
+
+#con_img_0{
+    width:45vh;
+    position: absolute;
+    top: 60vh;
+    left:10vw;
+    display:none
+}
+
+#con_img_1{
+    width: 45vh;
+    position: absolute;
+    top: 60vh;
+    left:38.5vw;
+    display:none
+}
+
+#con_img_2{
+    width: 45vh;
+    position: absolute;
+    top: 60vh;
+    left: 67vw;
+    display:none
+}
+
+#endcs0{
+    font-size:0.8vw;
+    position: absolute;
+    top: 87vh;
+    right: 37vw;
+    background-color: #262161;
+    color: white;
+    display:none;
+}
+
+
+
+
+
+/**************************            CS1           **************************/
 #energy-header{
     margin: 0;
 }
@@ -26,7 +166,6 @@
     left: 9.4vw;
     z-index:1;
 }
-
 
 /* The explanation */
 #top{
@@ -58,15 +197,12 @@
     position: absolute;
     top: 47.5vh;
     left:10vw;
-    opacity:0;
     color:red;
 }
 
-
-#top, #process, #bottom{
+#top, #process, #bottom, #notes, #step-1, #step-2, #step-3, #step-4{
     opacity: 0
 }
-
 
 /* The steps */
 #step-1{
@@ -74,7 +210,6 @@
     justify-content: center;
     position: absolute;
     top: 50vh;
-    opacity: 0;
 }
 
 #step-2{
@@ -82,7 +217,6 @@
     justify-content: center;
     position: absolute;
     top: 50vh;
-    opacity: 0;
 }
 
 #step-3{
@@ -90,7 +224,6 @@
     justify-content: center;
     position: absolute;
     top: 50vh;
-    opacity:0;
 }
 
 #step-4{
@@ -98,9 +231,7 @@
     position: absolute;
     top: 15vh;
     left: 30vw;
-    opacity:0;
 }
-
 
 /* The equation */
 #plus{
@@ -108,7 +239,6 @@
     position: absolute;
     top: 55vh;
     left: 54.5vw;
-    opacity: 0;
 }
 
 #equal{
@@ -116,7 +246,6 @@
     position: absolute;
     top: 54.5vh;
     left: 29vw;
-    opacity: 0;
 }
 
 #plus-1{
@@ -124,7 +253,6 @@
     position: absolute;
     top: 55vh;
     left: 50vw;
-    opacity: 0;
 }
 
 #equal-1{
@@ -132,7 +260,6 @@
     position: absolute;
     top: 54.5vh;
     left: 33vw;
-    opacity: 0;
 }
 
 #algebra-1{
@@ -140,7 +267,6 @@
     position: absolute;
     top: 16vh;
     left: 55vw;
-    opacity:1;
 }
 
 #algebra-2{
@@ -148,7 +274,6 @@
     position: absolute;
     top: 21vh;
     left: 51.6vw;
-    opacity:1;
 }
 
 #algebra-3{
@@ -156,7 +281,6 @@
     position: absolute;
     top: 26vh;
     left: 48.4vw;
-    opacity:1;
 }
 
 #algebra-4{
@@ -164,7 +288,6 @@
     position: absolute;
     top: 31vh;
     left: 51.6vw;
-    opacity:1;
 }
 
 #algebra-5{
@@ -172,13 +295,11 @@
     position: absolute;
     top: 36vh;
     left: 50.1vw;
-    opacity:1;
 }
 
-#algebra-1, #algebra-2, #algebra-3, #algebra-4, #algebra-5{
+#algebra-1, #algebra-2, #algebra-3, #algebra-4, #algebra-5, #plus, #equal, #plus-1, #equal-1{
     opacity:0;
 }
-
 
 /* The buttons */
 /* top | right | bottom | left */
@@ -198,7 +319,7 @@
     font-size:1vw;
     position: absolute;
     top: 57vh;
-    opacity: 0;
+    display:none;
 }
 
 #buttonleft{
@@ -283,7 +404,6 @@
     margin: 0 0 0;
     padding: 0.2vh 1vw 0.2vh 1vw;
     border-radius: 0.2vw;
-    opacity:0;
 }
 
 #button-step-2{
@@ -297,7 +417,6 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:0;
 }
 
 #button-step-3{
@@ -311,7 +430,6 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:0;
 }
 
 #button-step-4{
@@ -325,7 +443,6 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:0;
 }
 
 #note{
@@ -339,7 +456,6 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:0;
 }
 
 #al-button-1{
@@ -353,7 +469,6 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:1;
 }
 
 #al-button-2{
@@ -367,7 +482,6 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:1;
 }
 
 #al-button-3{
@@ -381,7 +495,6 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:1;
 }
 
 #al-button-4{
@@ -395,11 +508,10 @@
     padding: 0.2vh 1vw 0.2vh 1vw;
     margin: 0 0 0;
     border-radius: 0.2vw;
-    opacity:1;
 }
 
-#al-button-1, #al-button-2, #al-button-3, #al-button-4{
-    opacity:0;
+#button-step-1, #button-step-2, #button-step-3, #button-step-4, #note, #al-button-1, #al-button-2, #al-button-3, #al-button-4{
+    display:none;
 }
 
 /* The audio buttons */
@@ -431,6 +543,31 @@
     cursor: pointer;
 }
 
+#btn11, #btn1{
+    font-size: 0.8vw;
+    position: absolute;
+    top:85vh;
+    background-color: #262161;
+    color: white;
+    display:none;
+}
+
+#btn11{
+    position: absolute;
+    left: 37vw;
+}
+
+#btn1{
+    position: absolute;
+    right: 37vw;
+}
+
+
+
+
+
+
+/**************************            CS2           **************************/
 #problem1{
     color: black;
 }
@@ -457,6 +594,69 @@
     right: 1.5vw;
 }
 
+#mul-choice-1{
+    font-size: 1.3vw;
+    color: #1e0dcf;
+    position: absolute;
+    top: 40vh;
+    left: 5vw;
+}
+
+#mul-choice-2{
+    font-size:1.3vw;
+    color: #b90808;
+    position: absolute;
+    top: 40vh;
+    left: 48vw;
+}
+
+#subbtn1{
+    background-color: #262161;
+    color: white;
+    position: absolute;
+    top: 48vh;
+    left: 30vw;
+}
+
+#subbtn2{
+    background-color: #262161;
+    color: white;
+    position: absolute;
+    top: 48vh;
+    left: 75vw;
+}
+
+#prob2-box{
+    display: none;
+}
+
+#prob_1_bullet{
+    width: 25vh;
+    position: absolute;
+    top: 20vh;
+    left: 3vw;
+}
+
+#prob_1_runner{
+    width: 30vh;
+    position: absolute;
+    top: 17vh;
+    left: 20vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************            CS3           **************************/
 #prob3{
     font-size: 1.3vw;
     position: absolute;
@@ -483,59 +683,70 @@
     right: 1.5vw;
 }
 
-#mul-choice-1{
-    font-size: 1.3vw;
-    color: #1e0dcf;
+#hint3abtn{
+    margin:0;
+    padding:0.5vh 1vw 0.5vh 1vw;
+    font-size:0.8vw;
+    background-color: #262161;
+    color:white;
     position: absolute;
-    top: 40vh;
-    left: 5vw;
+    top: 22.7vh;
+    left: 2vw;
 }
 
-#mul-choice-2{
-    font-size:1.3vw;
-    color: #b90808;
+#hint3a{
+    font-size:1vw;
+    color: #1e0dcf;
     position: absolute;
-    top: 40vh;
-    left: 48vw;
+    top: 22vh;
+    left: 7vw;
+    right: 43vw;
+    opacity:0;
 }
 
 #mul-choice-3-a{
     font-size: 1.3vw;
     color: #1e0dcf;
     position: absolute;
-    top: 23vh;
+    top: 32vh;
     left: 3vw;
+}
+
+#hint3bbtn{
+    margin:0;
+    padding:0.5vh 1vw 0.5vh 1vw;
+    font-size:0.8vw;
+    background-color: #b90808;
+    color:white;
+    position: absolute;
+    top: 22.7vh;
+    left: 45.5vw;
+    display: none;
+}
+
+#hint3b{
+    font-size: 1vw;
+    color: #b90808;
+    position: absolute;
+    top: 22vh;
+    left: 51.5vw;
+    right: 1.5vw;
+    opacity:0;
 }
 
 #mul-choice-3-b{
     font-size: 1.3vw;
     color: #b90808;
     position: absolute;
-    top: 23vh;
+    top: 32vh;
     left: 48vw;
-}
-
-#subbtn1{
-    background-color: #262161;
-    color: white;
-    position: absolute;
-    top: 48vh;
-    left: 30vw;
-}
-
-#subbtn2{
-    background-color: #262161;
-    color: white;
-    position: absolute;
-    top: 48vh;
-    left: 75vw;
 }
 
 #subbtn3a{
     background-color: #262161;
     color: white;
     position: absolute;
-    top: 53vh;
+    top: 57vh;
     left: 15vw;
 }
 
@@ -543,28 +754,46 @@
     background-color: #262161;
     color: white;
     position: absolute;
-    top: 53vh;
+    top: 57vh;
     left: 60vw;
-}
-
-#prob2-box{
-    display: none;
 }
 
 #prob3b-box{
     display: none;
 }
 
-#prob_1_bullet{
-    width: 25vh;
+
+
+
+
+
+
+
+/**************************            CS4           **************************/
+#prob4{
+    font-size: 1.3vw;
     position: absolute;
-    top: 20vh;
-    left: 3vw;
+    top: 2vh;
+    left: 1.5vw;
+    right: 1.5vw;
 }
 
-#prob_1_runner{
-    width: 30vh;
+#hint4btn{
+    margin:0;
+    padding:0.5vh 1vw 0.5vh 1vw;
+    font-size:0.8vw;
+    background-color: #c4c4c4;
+    color: black;
     position: absolute;
-    top: 17vh;
-    left: 20vw;
+    top: 15.5vh;
+    left: 2.5vw;
+}
+
+#hint4{
+    font-size: 1vw;
+    position: absolute;
+    top: 12vh;
+    left: 8vw;
+    right: 1.5vw;
+    opacity:0;
 }

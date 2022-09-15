@@ -24,7 +24,6 @@
                   </div>
                   <div id="mental-state-buttons">
                     <button id="distracted-button" class="btn alternate1">Distracted</button>
-                    <button id="focused-button" class="btn primary">Focused</button>
                   </div>
                 </div>
                 <div class="tabs">
@@ -93,7 +92,42 @@
 </form> -->
 <!-- End Forms -->
 
-    <!-- Content Stage 1 -->
+
+
+
+
+<!--------------------------- CS0 -------------------------------------------------------------------------------->
+<div class="content-stage" id="cs0">
+  <div class="hdr">
+    <h2 id="cs0_header">Review</h2>
+  </div>
+  <img id="kinetic_energy" src="{% static "IMG/energy/kinetic_energy.svg"%}"/>
+  <img id="potential_energy" src="{% static "IMG/energy/potential_energy.svg"%}"/>
+  <img id="work_friction" src="{% static "IMG/energy/work_friction.svg"%}"/>
+  <img id="con_energy" src="{% static "IMG/energy/con_energy.svg"%}"/>
+  <img id="form_K" src="{% static "IMG/energy/form_K.svg"%}"/>
+  <img id="form_U" src="{% static "IMG/energy/form_U.svg"%}"/>
+  <img id="form_W" src="{% static "IMG/energy/form_W.svg"%}"/>
+  <img id="con_img_0" src="{% static "IMG/energy/sled_img_0.svg"%}"/>
+  <img id="con_img_1" src="{% static "IMG/energy/sled_img_1.svg"%}"/>
+  <img id="con_img_2" src="{% static "IMG/energy/sled_img_2.svg"%}"/>
+  <button id="endcs0" class="btn buttons"> <strong>Let's look at a problem</strong> </button>
+
+  <h3 id="def_K">\(\mathbf{Kinetic \text{ } energy}\) is the energy of an object due to its \(\color{red}\mathbf{MOTION}\) </h3>
+  <h3 id="def_U"> \(\mathbf{Potential \text{ } energy}\) is the energy stored in an object due to its 
+    \(\color{green}\mathbf{POSITION}\)</h3>
+  <h3 id="def_W"> \(\mathbf{Work}\) done by friction is the \(\color{Tan}\mathbf{ENERGY}\) \(\color{Tan}\mathbf{LOSS}\) due to \(\color{Tan}\mathbf{FRICTION}\) between 
+    the surface of the moving object and the floor.</h3>
+</div>
+
+
+
+
+
+
+
+
+<!--------------------------- CS1 -------------------------------------------------------------------------------->
 <div class="content-stage" id="cs1" >
     <div class="hdr">
         <h2 id="energy-header">
@@ -121,10 +155,10 @@
       <h3 id="step-4"><span style="font-size:2vw"><strong>Step 4:</strong></span> Use algebra</h3>
 
       <!-- The explanation   -->
-      <h3 id="top"> 1. Potential energy \(\mathbf{=mgh_0}\)</h3>
-      <h3 id="process"> 1. Potention energy \(\mathbf{=mgh}\)<br> 2. Kinetic energy \(\mathbf{=\frac{1}{2}mv^2}\) <br> 
-        3. Energy loss due to friction \(\mathbf{=W}\)</h3>
-      <h3 id="bottom">1. Kinetic energy \(\mathbf{\frac{1}{2}mV_{f}^{2}}\)</h3>
+      <h3 id="top"> - Potential energy \(\mathbf{=mgh_0}\)</h3>
+      <h3 id="process"> - Potention energy \(\mathbf{=mgh}\)<br> - Kinetic energy \(\mathbf{=\frac{1}{2}mv^2}\) <br> 
+        - Energy loss due to friction \(\mathbf{=W}\)</h3>
+      <h3 id="bottom">- Kinetic energy \(\mathbf{\frac{1}{2}mV_{f}^{2}}\)</h3>
       <ul id="notes">
         <li> If the problem is frictionless (\(\mathbf{W=0}\)), then from the highlighted equation above, 
           <span style="background-color: rgb(255, 255, 105)">\(\mathbf{V_f = \sqrt{2gh_0}}\)</span></li>
@@ -176,33 +210,43 @@
       <img id="replaybutton" src="{% static "IMG/energy/replay.svg"%}"/>
 
     </div>
-    <div class="ftr">
-      <button class="btn primary reduced-vis" id="btn11">Back</button>
-      <button id="btn1" class="btn primary reduced-vis">Next</button>
 
-      <!-- The AI audio -->
-      <audio class="primary-bg" id="problemstatement" controlList="nodownload">
-        <source src="https://dl.dropbox.com/s/4xowk0qqk05bwth/Energy%20Mod_%20GenProb-2022-08-27.wav?dl=1"/>
-      </audio>
-      <audio class="primary-bg" id="genprob-step1" controlList="nodownload">
-        <source src="https://dl.dropbox.com/s/bwdlubpqbd50gjt/Energy%20Mod_%20GenProb%20Step1-2022-08-28.wav?dl=1"/>
-      </audio>
-      <audio class="primary-bg" id="genprob-step2" controlList="nodownload">
-        <source src="https://dl.dropbox.com/s/w0zd98568f7kwl4/GenProbStep2-2022-09-01.wav?dl=1"/>
-      </audio>
-      <audio class="primary-bg" id="genprob-step3" controllist="nodownload">
-        <source src="https://dl.dropbox.com/s/xa5ef0w22bzydzf/Energy%20Mod_%20GenProb%20Step%203-2022-09-03.wav?dl=1">
-      </audio>
-      <audio class="primary-gb" id="genprob-step4" controllist="nodownload">
-        <source src="https://dl.dropbox.com/s/6kpbiu4uu0dxfwu/Energy%20Mod_%20GrnProb%20Step%204-2022-09-03.wav?dl=1">
-      </audio>
-      <audio class="primary-bg" id="genprob-step4-2" controllist="nodownload">
-        <source src="https://dl.dropbox.com/s/xx1exwa681do30k/Energy%20Mod_%20genprob%20step%204-2-2022-09-05.wav?dl=1">
-      </audio>
-    </div>
+
+    <button class="btn buttons" id="btn11"><strong>Review</strong></button>
+    <button id="btn1" class="btn buttons"><strong>Practice</strong></button>
+
+    <!-- The AI audio -->
+    <audio class="primary-bg" id="problemstatement" controlList="nodownload">
+      <source src="https://dl.dropbox.com/s/4xowk0qqk05bwth/Energy%20Mod_%20GenProb-2022-08-27.wav?dl=1"/>
+    </audio>
+    <audio class="primary-bg" id="genprob-step1" controlList="nodownload">
+      <source src="https://dl.dropbox.com/s/bwdlubpqbd50gjt/Energy%20Mod_%20GenProb%20Step1-2022-08-28.wav?dl=1"/>
+    </audio>
+    <audio class="primary-bg" id="genprob-step2" controlList="nodownload">
+      <source src="https://dl.dropbox.com/s/w0zd98568f7kwl4/GenProbStep2-2022-09-01.wav?dl=1"/>
+    </audio>
+    <audio class="primary-bg" id="genprob-step3" controllist="nodownload">
+      <source src="https://dl.dropbox.com/s/xa5ef0w22bzydzf/Energy%20Mod_%20GenProb%20Step%203-2022-09-03.wav?dl=1">
+    </audio>
+    <audio class="primary-gb" id="genprob-step4" controllist="nodownload">
+      <source src="https://dl.dropbox.com/s/6kpbiu4uu0dxfwu/Energy%20Mod_%20GrnProb%20Step%204-2022-09-03.wav?dl=1">
+    </audio>
+    <audio class="primary-bg" id="genprob-step4-2" controllist="nodownload">
+      <source src="https://dl.dropbox.com/s/xx1exwa681do30k/Energy%20Mod_%20genprob%20step%204-2-2022-09-05.wav?dl=1">
+    </audio>
+    
 </div>
 
 
+
+
+
+
+
+
+
+
+<!--------------------------- CS2 -------------------------------------------------------------------------------->
 <div class="content-stage" id="cs2">
   <div class="hdr">
     <h2 id="post-prob-1">
@@ -253,14 +297,17 @@
       <button id="subbtn2" form="mul-choice-2" class="btn primary" type="submit">Submit</button>
   </div>
   </div>
-  <div class="ftr">
-    <button class="btn primary reduced-vis" id="btn22">Back</button>
-    <button id="btn2" class="btn primary reduced-vis">Next</button>
-  </div>
 </div>
 
 
 
+
+
+
+
+
+
+<!--------------------------- CS3 -------------------------------------------------------------------------------->
 <div class="content-stage" id="cs3">
     <div class="hdr">
       <h2 id="post-prob-2">
@@ -272,7 +319,18 @@
       <h3 id="prob3"> <strong>Problem 3:</strong> Ben is standing on the rooftop of a \(30m\)-tall building. Ben throws a 
         tennis ball upward at a speed of \(5m/s\). Given the gravitational constant \(g=9.8 m/s^2\).</h3>
       <div id="prob3a-box">
-        <h3 id="prob3a">a/ What is the highest point the ball can reach before falling back down?</h3>
+      <h3 id="prob3a">a/ What is the highest point the ball can reach before falling back down?</h3>
+
+      <button id="hint3abtn" class="btn buttons">Hint</button>
+      <button id="hint3bbtn" class="btn buttons">Hint</button>
+
+      <h3 id="hint3a">+ Define what type of energy when the ball is at points A and B.
+        <br/> + Apply conservation of energy when the ball is at points A and B.
+      </h3>
+      <h3 id="hint3b">+ Define what type of energy when the ball is at points A and C.
+        <br/> + Apply conservation of energy when the ball is at points A and C.
+      </h3>
+
         <form method="POST" id="mul-choice-3-a">
           <p>Please select a choice below</p>
           <div>
@@ -310,21 +368,39 @@
       </div>
 
     </div>
-    <div class="ftr">
-      <button class="btn primary reduced-vis" id="btn33">Back</button>
-      <button id="btn3" class="btn primary reduced-vis">Next</button>
-    <div>
-</div>
-
-
-    <!-- Multiple choice -->
-
-
-
 
 </div>
-</div>
 
+
+
+
+
+
+
+
+
+
+<!--------------------------- CS4 -------------------------------------------------------------------------------->
+<div class="content-stage" id="cs4">
+  <div class="hdr">
+    <h2 id="post-prob-3">
+      Energy Problems - Level 3
+    </h2>
+  </div>
+  <div class="ctr">
+    <h3 id="prob4"><strong>Problem 4: </strong> Charles is standing on a \(10m\)-high hill. He shoots
+    out a bullet from his shotgun at an angle \(30^\circ\) upward at \(75m/s\). Given the total energy loss by 
+  friction between the bullet and the air is \(5J\). What is the speed of the bullet when it hits the ground? </h3>
+    <h3 id="hint4"> + Compare this problem with the previous problem (Ben was throwing a ball upward).
+      <br/> + How does <strong>work done by friction</strong> apply into the conservation of energy equation?
+      <br/> + Apply conservation of energy when the bullet is fired and when it touches the ground.
+      <br/> + Do we need to know the mass of the bullet? 
+    </h3>
+
+  <button id="hint4btn" class="btn buttons">Hint</button>
+
+  </div>
+</div>
 
 
 
