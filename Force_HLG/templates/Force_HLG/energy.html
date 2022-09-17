@@ -118,6 +118,40 @@
     \(\color{green}\mathbf{POSITION}\)</h3>
   <h3 id="def_W"> \(\mathbf{Work}\) done by friction is the \(\color{Tan}\mathbf{ENERGY}\) \(\color{Tan}\mathbf{LOSS}\) due to \(\color{Tan}\mathbf{FRICTION}\) between 
     the surface of the moving object and the floor.</h3>
+
+
+
+  <audio class="primary-gb" id="review" controllist="nodownload">
+    <source src="https://dl.dropbox.com/s/l82cd42g0d8btg4/Review-2022-09-17.wav?dl=1"></audio>
+  
+  <audio class="primary-gb" id="Def_K" controllist="nodownload">
+    <source src="https://dl.dropbox.com/s/3ladtt9ruxt9kt4/Def_K-2022-09-17.wav?dl=1">
+  </audio>
+
+  <audio class="primary-gb" id="Def_U" controllist="nodownload">
+    <source src="https://dl.dropbox.com/s/t1f7hrdhivrowzf/Def_U-2022-09-17.wav?dl=1">
+  </audio>
+
+  <audio class="primary-gb" id="Def_W" controllist="nodownload">
+    <source src="https:/dl.dropbox.com/s/a2erjjeb4d3szau/Def_W-2022-09-17.wav?dl=1">
+  </audio>
+
+  <audio class="primary-gb" id="ConE1" controllist="nodowndload">
+    <source src="https://dl.dropbox.com/s/gpdxrn9voef8r9z/Conservation_of_E1-2022-09-17.wav?dl=1">
+  </audio>
+
+  <audio class="primary-gb" id="ConE2" controllist="nodownload">
+    <source src="https://dl.dropbox.com/s/wr9zhvdz7v25nwj/Conservation_of_E2-2022-09-17.wav?dl=1">
+  </audio>
+    
+  <audio class="primary-gb" id="ConE3" controllist="nodownload">
+    <source src="https://dl.dropbox.com/s/ht6gn5pbj1q4h6q/Conservation_of_E3-2022-09-17.wav?dl=1">
+  </audio>
+
+  <audio class="primary-gb" id="ConE4" controllist="nodownload">
+    <source src="https://dl.dropbox.com/s/6qjj12o6lilc47g/Conservation_of_E4-2022-09-17.wav?dl=1">
+  </audio>
+
 </div>
 
 
@@ -256,8 +290,9 @@
   <div class="ctr">
    <!-- Problem statement -->
   <div id="prob1-box">
-   <h3 id="prob1"> <strong> <span id="problem1"> Problem 1:</span></strong> Given 2 scenarios, a \(\mathbf{15g}\) bullet flying at \(\mathbf{350m/s}\) 
-    and a \(\mathbf{64kg}\) man running at speed \(\mathbf{6m/s}\). Which has the larger kinetic energy? </h3>
+   <h3 id="prob1"> <strong> <span id="problem1"> Problem 1:</span></strong> Given 2 scenarios, 
+    a \(\mathbf{15g}\) bullet flying at \(\mathbf{5500m/s}\) 
+    and a \(\mathbf{64kg}\) man running at speed \(\mathbf{2.5m/s}\). Which has the larger kinetic energy? </h3>
       <!-- <div><img src="{% static "IMG/Pre/pref2.svg"%}"/></div> -->
         
         <form method="POST" id="mul-choice-1">
@@ -278,8 +313,9 @@
         <button id="subbtn1" form="mul-choice-1" class="btn primary" type="submit">Submit</button>
     </div>
   <div id="prob2-box">     
-   <h3 id="prob2"> <strong> <span id="problem2"> Problem 2:</span></strong> Which has the larger potential energy, a \(\mathbf{1200kg}\) car on top of 
-    the hill with height of \(\mathbf{5m}\) or a \(\mathbf{950kg}\) roller coaster at the highest point of the 
+   <h3 id="prob2"> <strong> <span id="problem2"> Problem 2:</span></strong> Which has the larger potential energy, 
+    a \(\mathbf{1200kg}\) car on top of 
+    the hill with height of \(\mathbf{5m}\) or a \(\mathbf{737kg}\) roller coaster at the highest point of the 
     \(\mathbf{8m}\) high track?</h3>
           
       <form method="POST" id="mul-choice-2">
@@ -294,6 +330,8 @@
               {% csrf_token %}
           </div>
       </form>
+      <img id="prob2-car" src="{% static "IMG/energy/car.svg"%}"/>
+      <img id="prob2-roller-coaster" src="{% static "IMG/energy/roller_coaster.svg"%}"/>
       <button id="subbtn2" form="mul-choice-2" class="btn primary" type="submit">Submit</button>
   </div>
   </div>
@@ -316,8 +354,8 @@
     </div>
     <div class="ctr">
       <!-- Problem statement -->
-      <h3 id="prob3"> <strong>Problem 3:</strong> Ben is standing on the rooftop of a \(30m\)-tall building. Ben throws a 
-        tennis ball upward at a speed of \(5m/s\). Given the gravitational constant \(g=9.8 m/s^2\).</h3>
+      <h3 id="prob3"> <strong>Problem 3:</strong> Ben stands on the rooftop of a building holding a tennis ball \(30m\) 
+        above the ground. Ben throws the ball upward at a speed of \(5m/s\). Given the gravitational constant \(g=9.8 m/s^2\).</h3>
       <div id="prob3a-box">
       <h3 id="prob3a">a/ What is the highest point the ball can reach before falling back down?</h3>
 
@@ -345,6 +383,7 @@
             {% csrf_token %}
           </div>
         </form>
+        <img id="prob3-ben" src="{% static "IMG/energy/prob3_ben.svg"%}"/>
         <button id="subbtn3a" form="mul-choice-3-a" class="btn primary" type="submit">Submit</button>
       </div>
       
@@ -384,18 +423,37 @@
 <div class="content-stage" id="cs4">
   <div class="hdr">
     <h2 id="post-prob-3">
-      Energy Problems - Level 3
+      Energy Problems - Level 3 (Are you ready for a challenge?)
     </h2>
   </div>
   <div class="ctr">
-    <h3 id="prob4"><strong>Problem 4: </strong> Charles is standing on a \(10m\)-high hill. He shoots
-    out a bullet from his shotgun at an angle \(30^\circ\) upward at \(75m/s\). Given the total energy loss by 
-  friction between the bullet and the air is \(5J\). What is the speed of the bullet when it hits the ground? </h3>
-    <h3 id="hint4"> + Compare this problem with the previous problem (Ben was throwing a ball upward).
-      <br/> + How does <strong>work done by friction</strong> apply into the conservation of energy equation?
-      <br/> + Apply conservation of energy when the bullet is fired and when it touches the ground.
-      <br/> + Do we need to know the mass of the bullet? 
+    <h3 id="prob4"><strong>Problem 4: </strong> Charles pushes and releases a \(20kg\) box. The box then slides with speed \(v\) up a 
+      \(30^\circ\) ramp. The friction force between the box and the ramp is \(34N\) and the ramp is \(7m\) long. 
+      What is the box's minimum speed at the bottom of the ramp in order for it to slide to the top?</h3>
+    <h3 id="hint4"> + What type(s) of energy does the box have at the top of the ramp? (Think about the word "<strong>minimum</strong>")
+      <br/> + How does <strong>work done by friction</strong> apply into the conservation of energy equation? What is its formula?
+      <br/> + Apply conservation of energy for the box at the bottom and at the top of the ramp.
     </h3>
+
+    <div id="prob4-box">
+      <form method="POST" id="mul-choice-4">
+        <p>Please select a choice below</p>
+        <div>
+          {{forms.form3b.choice.0}}
+          <label for="q3bc1"> \(9.62\) \(m/s\)</label> <br/>
+          {{forms.form3b.choice.1}}
+          <label for="q3bc2"> \(10.78\) \(m/s\)</label> <br/>
+          {{forms.form3b.choice.2}}
+          <label for="q3bc3"> \(11.95\) \(m/s\)</label> <br/>
+          {{forms.form3b.choice.3}}
+          <label for="q3bc4"> None of the above</label> <br/>
+          {% csrf_token %}
+        </div>
+      </form>
+      <img id="prob4-charles" src="{% static "IMG/energy/prob4_charles.svg"%}"/>
+      <button id="subbtn4" form="mul-choice-3-b" class="btn primary" type="submit">Submit</button>
+    </div>
+
 
   <button id="hint4btn" class="btn buttons">Hint</button>
 

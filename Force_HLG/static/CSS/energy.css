@@ -644,6 +644,20 @@
     left: 20vw;
 }
 
+#prob2-car{
+    width: 35vh;
+    position: absolute;
+    top: 20vh;
+    left: 45vw;
+}
+
+#prob2-roller-coaster{
+    width: 35vh;
+    position: absolute;
+    top: 17vh;
+    right: 3vw;
+}
+
 
 
 
@@ -690,7 +704,7 @@
     background-color: #262161;
     color:white;
     position: absolute;
-    top: 22.7vh;
+    top: 21.7vh;
     left: 2vw;
 }
 
@@ -698,9 +712,9 @@
     font-size:1vw;
     color: #1e0dcf;
     position: absolute;
-    top: 22vh;
-    left: 7vw;
-    right: 43vw;
+    top: 21vh;
+    left: 6vw;
+    right: 44vw;
     opacity:0;
 }
 
@@ -708,7 +722,7 @@
     font-size: 1.3vw;
     color: #1e0dcf;
     position: absolute;
-    top: 32vh;
+    top: 30vh;
     left: 3vw;
 }
 
@@ -719,7 +733,7 @@
     background-color: #b90808;
     color:white;
     position: absolute;
-    top: 22.7vh;
+    top: 21.7vh;
     left: 45.5vw;
     display: none;
 }
@@ -728,8 +742,8 @@
     font-size: 1vw;
     color: #b90808;
     position: absolute;
-    top: 22vh;
-    left: 51.5vw;
+    top: 21vh;
+    left: 50vw;
     right: 1.5vw;
     opacity:0;
 }
@@ -738,8 +752,8 @@
     font-size: 1.3vw;
     color: #b90808;
     position: absolute;
-    top: 32vh;
-    left: 48vw;
+    top: 30vh;
+    left: 50vw;
 }
 
 #subbtn3a{
@@ -755,11 +769,18 @@
     color: white;
     position: absolute;
     top: 57vh;
-    left: 60vw;
+    left: 65vw;
 }
 
 #prob3b-box{
     display: none;
+}
+
+#prob3-ben{
+    width:37vh;
+    position: absolute;
+    top: 19vh;
+    left: 27.5vw;
 }
 
 
@@ -785,15 +806,39 @@
     background-color: #c4c4c4;
     color: black;
     position: absolute;
-    top: 15.5vh;
-    left: 2.5vw;
+    top: 16vh;
+    left: 2vw;
 }
 
 #hint4{
     font-size: 1vw;
     position: absolute;
-    top: 12vh;
-    left: 8vw;
-    right: 1.5vw;
+    top: 14vh;
+    left: 6vw;
+    /* right: 40vw; */
     opacity:0;
 }
+
+#mul-choice-4{
+    font-size: 1.3vw;
+    color: #000000;
+    position: absolute;
+    top: 26vh;
+    left: 5vw;
+}
+
+#subbtn4{
+    background-color: #262161;
+    color: white;
+    position: absolute;
+    top: 55vh;
+    left: 10vw;
+}
+
+#prob4-charles{
+    width:70vh;
+    position: absolute;
+    top: 15vh;
+    left: 45vw;
+}
+

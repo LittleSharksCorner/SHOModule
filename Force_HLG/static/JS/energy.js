@@ -85,6 +85,14 @@ const endcs0 = document.getElementById('endcs0')
 const hint3abtn = document.getElementById('hint3abtn')
 const hint3bbtn = document.getElementById('hint3bbtn')
 const hint4btn = document.getElementById('hint4btn')
+const review= document.getElementById('review')
+const dK = document.getElementById('Def_K')
+const dU = document.getElementById('Def_U')
+const dW = document.getElementById('Def_W')
+const CE1 = document.getElementById('ConE1')
+const CE2 = document.getElementById('ConE2')
+const CE3 = document.getElementById('ConE3')
+const CE4 = document.getElementById('ConE4')
 
 
 let fin
@@ -103,6 +111,9 @@ let Wbtn_clicked = false
 ////////     CS0     //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 Kbtn.addEventListener('click', ()=>{
+    dK.play();
+    dU.pause();
+    dW.pause();
     defK.style.opacity=1;
     cs0hdr.style.opacity=0;
     formK.style.opacity=1;
@@ -123,6 +134,9 @@ Kbtn.addEventListener('click', ()=>{
 })
 
 Ubtn.addEventListener('click',()=>{
+    dU.play();
+    dK.pause();
+    dW.pause();
     defU.style.opacity=1;
     cs0hdr.style.opacity=0;
     formU.style.opacity=1;
@@ -143,6 +157,9 @@ Ubtn.addEventListener('click',()=>{
 })
 
 Wbtn.addEventListener('click', ()=>{
+    dW.play();
+    dK.pause();
+    dU.pause();
     defW.style.opacity=1;
     cs0hdr.style.opacity=0;
     formW.style.opacity=1;
@@ -162,21 +179,41 @@ Wbtn.addEventListener('click', ()=>{
     }
 })
 
+// CE1.addEventListener('ended',()=>{
+//     Ebtn.style.display='inline'
+// })
 
 Ebtn.addEventListener('click', ()=>{
+    dK.pause();
+    dU.pause();
+    dW.pause();
+    CE1.play();
     con0.style.display='inline';
     Ebtn.style.display='none'
 })
 
 con0.addEventListener('click',()=>{
-    con1.style.display='inline'
+    CE1.pause();
+    CE2.play()
+})
+
+CE2.addEventListener('ended', ()=>{
+    con1.style.display = 'inline'
 })
 
 con1.addEventListener('click', ()=>{
+    CE3.play()
+})
+
+CE3.addEventListener('ended',()=>{
     con2.style.display='inline'
 })
 
 con2.addEventListener('click',()=>{
+    CE4.play()
+})
+
+CE4.addEventListener('ended',()=>{
     endcs0.style.display='inline'
 })
 
@@ -184,6 +221,7 @@ endcs0.addEventListener('click',()=>{
     cs0.style.display='none';
     cs1.style.display='grid'
 })
+
 
 
 
@@ -482,8 +520,6 @@ back1.addEventListener('click', ()=>{
 
 
 ////////     CS2     //////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 
 //jQuery listens for submission of question 1
 $("#mul-choice-1").submit(function(e){
