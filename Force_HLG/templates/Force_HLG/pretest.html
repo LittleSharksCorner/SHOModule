@@ -5,7 +5,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static "utility.css"%}">
 <link rel="stylesheet" href="{% static "style.css"%}"> 
-<title>Force Module | Warmup</title>
+<title>Energy Module | Warmup</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% endblock %}
@@ -24,7 +24,6 @@
                     </div>
                     <div id="mental-state-buttons">
                       <button id="distracted-button" class="btn alternate1">Distracted</button>
-                      <button id="focused-button" class="btn primary">Focused</button>
                     </div>
                   </div>
                 <div class="tabs">
@@ -40,20 +39,7 @@
 
               </div>
 
-<form id="page-events" style="display: none">
-    {{forms.log}}
-    {%csrf_token%}
-</form>
-<form id="mouse-events" style="display: none">
-    {{forms.mouse}}
-    {%csrf_token%}
-</form>
-<form id="mouse-events2" style="display: none">
-    {{forms.mouse}}
-    {%csrf_token%}
-</form>
-
-<div id="start" style="width:100%; height:87vh; background-color: #f5f5f5;">
+<!-- <div id="start" style="width:100%; height:87vh; background-color: #f5f5f5;">
     <h2 id="STRTstatement">Click Start to begin</h2>
     <button id="start-btn" class="btn primary reduced-vis">START</button>
   </div>
@@ -68,10 +54,13 @@
     <div class="ftr">
         <button id="pre-btn" class="btn primary reduced-vis">Next</button>
     </div>
-</div>
+</div> -->
+
+
+
 
 <!-- Question 1 -->
-<div class="wrapper pretest" id="q1-container" style="display: none;">
+<div class="wrapper pretest" id="q1-container">
     <div class="hdr">
         <h2>Q1/10: What is the definition of kinetic energy (K)? Where \(m\) is mass and \(v\) is speed</h2>
     </div> 
@@ -161,7 +150,9 @@
 <!-- Question 3 -->
 <div class="wrapper pretest" id="q3-container" style="display: none;">
     <div class="hdr">
-        <h2>Q3/10: Which of the following is the definition of work (\(W\))? Where \(m\) is mass, \(v\) is speed, \(\Delta x\) is the magnitude of displacement, \(g\) is the gravitational constant, \(h\) is height, and \(F\) is the net force</h2>
+        <h2>Q3/10: Which of the following is the definition of work (\(W\))? Where \(m\) is mass, \(v\) is speed, 
+            \(\Delta x\) is the magnitude of displacement, \(g\) is the gravitational constant, \(h\) is height, 
+            and \(F\) is the net force along the direction of motion.</h2>
     </div> 
     <div class="ctr quiz">
         <div>               
@@ -372,7 +363,7 @@
 <!-- Question 7 -->
 <div class="wrapper pretest" id="q7-container" style="display: none;">
     <div class="hdr">
-        <h4>Q7/10: An elevator is moving upwards at constant speed. What is the sign (\(+/-\)) of the work being done by the cable?</h4>
+        <h4>Q7/10: An elevator is moving downward at constant speed. What is the sign (\(+/-\)) of the work being done by the cable?</h4>
     </div> 
     <div class="ctr quiz">
         <div><img src="{% static "IMG/energy/elevator.svg"%}"/></div>
@@ -465,7 +456,7 @@
 
 
 <!-- Question 9 -->
-<div class="wrapper pretest" id="q9-container">
+<div class="wrapper pretest" id="q9-container" style="display: none;">
     <div class="hdr">
         <h3> Q9/10: A block is initially moving at \(v=4 m/s\) when it encounters a rough patch in the floor (\(\mu_k = 0.3\)). Assuming \(g = 9.8m/s^2\) in what distance \(d\) will the block come to rest?</h3>
     </div> 

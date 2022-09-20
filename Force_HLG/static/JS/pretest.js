@@ -30,24 +30,15 @@ const isPlaying = () => {
     document.getElementById("bottombar").style.opacity = "0.4";
 }
 
-const startScreen = (show) => {
-    if (show){
-        strtDIV.style.display = 'grid';
-    } else {
-        strtDIV.style.display = 'none';
-    }
-    
-}
-
 // Function that toggles display of pre_statement (first frame)
-const pre_statement = (show) => {
-    if (show) {
-        preDIV.style.display = 'grid'
-        pageSt = 'Instructions'
-    } else{
-        preDIV.style.display = 'none'
-    }
-}
+// const pre_statement = (show) => {
+//     if (show) {
+//         preDIV.style.display = 'grid'
+//         pageSt = 'Instructions'
+//     } else{
+//         preDIV.style.display = 'none'
+//     }
+// }
 
 //Function that toggles display of ques1
 const ques1 = (show) => {
@@ -166,8 +157,7 @@ const cal = (show) => {
 #                                               #
 #################################################
 */
-pre_statement(false);
-ques1(false);
+ques1(true);
 ques2(false);
 ques3(false);
 ques4(false);
@@ -206,423 +196,420 @@ btn9 = document.getElementById("btn9")
 btn10 = document.getElementById("btn10")
 calBTN = document.getElementById("cal")
 
-//Initial screen with button at absolute center
-strtBTN.addEventListener('click',function(e){
-    strtBTN.style.backgroundColor = "red";
-    setTimeout(function(){
+// //Initial screen with button at absolute center
+// strtBTN.addEventListener('click',function(e){
+//     strtBTN.style.backgroundColor = "red";
+//     setTimeout(function(){
 
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Moving From Start to Instructions'
-        mouseForm.event.value = "Clicked Start Button"
+//         pageForm.event.value = 'Moving From Start to Instructions'
+//         mouseForm.event.value = "Clicked Start Button"
 
-        let rect = strtBTN.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = strtBTN.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-        startScreen(false);
-        pre_statement(true);
-    },250)
-})
+//         startScreen(false);
+//         pre_statement(true);
+//     },250)
+// })
 
 //Add event listener to move from pre-statement to question1 on button click
-preBTN.addEventListener('click',function(e){
-    preBTN.style.backgroundColor = "red";
-    setTimeout(function(){
+// preBTN.addEventListener('click',function(e){
+//     preBTN.style.backgroundColor = "red";
+//     setTimeout(function(){
 
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Moving From Instructions to Question 1'
-        mouseForm.event.value = "Clicked pre-button"
+//         pageForm.event.value = 'Moving From Instructions to Question 1'
+//         mouseForm.event.value = "Clicked pre-button"
 
-        let rect = preBTN.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = preBTN.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
-
-
-        pre_statement(false);
-        ques1(true);
-        isPlaying();
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
 
-    },250)
-});
+//         pre_statement(false);
+//         ques1(true);
+//         isPlaying();
+
+
+//     },250)
+// });
 
 //Add event listener to #btn1 that turns #btn1 red, logs the click location and the button location
 //Submits the relevant forms
-btn1.addEventListener('click',function(e){
-    btn1.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn1.addEventListener('click',function(e){
+//     btn1.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 1'
-        mouseForm.event.value = "Clicked Button 1"
+//         pageForm.event.value = 'Submitted Question 1'
+//         mouseForm.event.value = "Clicked Button 1"
 
-        let rect = btn1.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn1.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-
-
-    },250)
-})
+// })
 
 //Add event listener to #btn2 that turns #btn2 red, logs the click location and the button location
 //Submits the relevant forms
-btn2.addEventListener('click',function(e){
-    btn2.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn2.addEventListener('click',function(e){
+//     btn2.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 2'
-        mouseForm.event.value = "Clicked Button 2"
+//         pageForm.event.value = 'Submitted Question 2'
+//         mouseForm.event.value = "Clicked Button 2"
 
-        let rect = btn2.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn2.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn1 that turns #btn1 red, logs the click location and the button location
 //Submits the relevant forms
-btn3.addEventListener('click',function(e){
-    btn3.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn3.addEventListener('click',function(e){
+//     btn3.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 3'
-        mouseForm.event.value = "Clicked Button 3"
+//         pageForm.event.value = 'Submitted Question 3'
+//         mouseForm.event.value = "Clicked Button 3"
 
-        let rect = btn3.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn3.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn4 that turns #btn4 red, logs the click location and the button location
 //Submits the relevant forms
-btn4.addEventListener('click',function(e){
-    btn4.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn4.addEventListener('click',function(e){
+//     btn4.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 4'
-        mouseForm.event.value = "Clicked Button 4"
+//         pageForm.event.value = 'Submitted Question 4'
+//         mouseForm.event.value = "Clicked Button 4"
 
-        let rect = btn4.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn4.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn5 that turns #btn5 red, logs the click location and the button location
 //Submits the relevant forms
-btn5.addEventListener('click',function(e){
-    btn5.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn5.addEventListener('click',function(e){
+//     btn5.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 5'
-        mouseForm.event.value = "Clicked Button 5"
+//         pageForm.event.value = 'Submitted Question 5'
+//         mouseForm.event.value = "Clicked Button 5"
 
-        let rect = btn5.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn5.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn6 that turns #btn6 red, logs the click location and the button location
 //Submits the relevant forms
-btn6.addEventListener('click',function(e){
-    btn6.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn6.addEventListener('click',function(e){
+//     btn6.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 6'
-        mouseForm.event.value = "Clicked Button 6"
+//         pageForm.event.value = 'Submitted Question 6'
+//         mouseForm.event.value = "Clicked Button 6"
 
-        let rect = btn6.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn6.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn7 that turns #btn7 red, logs the click location and the button location
 //Submits the relevant forms
-btn7.addEventListener('click',function(e){
-    btn7.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn7.addEventListener('click',function(e){
+//     btn7.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 7'
-        mouseForm.event.value = "Clicked Button 7"
+//         pageForm.event.value = 'Submitted Question 7'
+//         mouseForm.event.value = "Clicked Button 7"
 
-        let rect = btn7.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn7.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn8 that turns #btn8 red, logs the click location and the button location
 //Submits the relevant forms
-btn8.addEventListener('click',function(e){
-    btn8.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn8.addEventListener('click',function(e){
+//     btn8.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 8'
-        mouseForm.event.value = "Clicked Button 8"
+//         pageForm.event.value = 'Submitted Question 8'
+//         mouseForm.event.value = "Clicked Button 8"
 
-        let rect = btn8.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn8.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn9 that turns #btn9 red, logs the click location and the button location
 //Submits the relevant forms
-btn9.addEventListener('click',function(e){
-    btn9.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn9.addEventListener('click',function(e){
+//     btn9.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 9'
-        mouseForm.event.value = "Clicked Button 9"
+//         pageForm.event.value = 'Submitted Question 9'
+//         mouseForm.event.value = "Clicked Button 9"
 
-        let rect = btn9.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn9.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 //Add event listener to #btn10 that turns #btn10 red, logs the click location and the button location
 //Submits the relevant forms
-btn10.addEventListener('click',function(e){
-    btn10.style.backgroundColor = "red"
-    setTimeout(function(){
-        pageForm = document.getElementById("page-events")
-        mouseForm = document.getElementById("mouse-events")
+// btn10.addEventListener('click',function(e){
+//     btn10.style.backgroundColor = "red"
+//     setTimeout(function(){
+//         pageForm = document.getElementById("page-events")
+//         mouseForm = document.getElementById("mouse-events")
 
-        pageForm.pageState.value = pageSt
-        mouseForm.pageState.value = pageSt
+//         pageForm.pageState.value = pageSt
+//         mouseForm.pageState.value = pageSt
 
 
-        const newDate = new Date();
-        const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//         const newDate = new Date();
+//         const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
  
-        pageForm.timeStamp.value = datetime
-        mouseForm.timeStamp.value = datetime
+//         pageForm.timeStamp.value = datetime
+//         mouseForm.timeStamp.value = datetime
 
-        pageForm.event.value = 'Submitted Question 10'
-        mouseForm.event.value = "Clicked Button 10"
+//         pageForm.event.value = 'Submitted Question 10'
+//         mouseForm.event.value = "Clicked Button 10"
 
-        let rect = btn10.getBoundingClientRect();
-        mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
-        mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
+//         let rect = btn10.getBoundingClientRect();
+//         mouseForm.clickedITMtl.value = `(${rect.left},${rect.top})`
+//         mouseForm.clickedITMbr.value  = `(${rect.right},${rect.bottom})`
 
-        mouseForm.mouseX.value = e.pageX
-        mouseForm.mouseY.value = e.pageY
+//         mouseForm.mouseX.value = e.pageX
+//         mouseForm.mouseY.value = e.pageY
 
-        $("#page-events").triggerHandler("submit")
-        $("#mouse-events").triggerHandler("submit")
+//         $("#page-events").triggerHandler("submit")
+//         $("#mouse-events").triggerHandler("submit")
 
-    },250)
-})
+//     },250)
+// })
 
 calBTN.addEventListener('click',function(){
     document.location.replace('/Energy/Energy_HLG/Energy_1')
@@ -642,58 +629,58 @@ calBTN.addEventListener('click',function(){
 #########################################
 */
 
-let fired = false;
-let prevX;
-let prevY;
+// let fired = false;
+// let prevX;
+// let prevY;
 
-document.addEventListener("mousemove",function(e){
-  let locX = e.pageX;
-  let locY = e.pageY;
-  const me = document.querySelector("#mouse-events")
-  if (!fired){
-    me.event.value = 'mouse-start'
-    me.mouseX.value = locX
-    me.mouseY.value = locY
-    const newDate = new Date();
-    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
-    me.timeStamp.value = datetime
-    me.clickedITMtl.value = ``
-    me.clickedITMbr.value  = ``
-    $("#mouse-events").triggerHandler("submit")
-    fired = true;
-  }
-  setTimeout(function(){
-    if(locX === prevX && locY === prevY){
-      me.event.value = 'mouse-stop'
-      me.mouseX.value = e.pageX
-      me.mouseY.value = e.pageY
-      const newDate = new Date();
-      const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
-      me.timeStamp.value = datetime
-      me.clickedITMtl.value = ``
-      me.clickedITMbr.value  = ``
-      $("#mouse-events").triggerHandler("submit")
-      fired=false;
-    }
-  },300)
-  prevX = locX
-  prevY = locY
-})
+// document.addEventListener("mousemove",function(e){
+//   let locX = e.pageX;
+//   let locY = e.pageY;
+//   const me = document.querySelector("#mouse-events")
+//   if (!fired){
+//     me.event.value = 'mouse-start'
+//     me.mouseX.value = locX
+//     me.mouseY.value = locY
+//     const newDate = new Date();
+//     const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//     me.timeStamp.value = datetime
+//     me.clickedITMtl.value = ``
+//     me.clickedITMbr.value  = ``
+//     $("#mouse-events").triggerHandler("submit")
+//     fired = true;
+//   }
+//   setTimeout(function(){
+//     if(locX === prevX && locY === prevY){
+//       me.event.value = 'mouse-stop'
+//       me.mouseX.value = e.pageX
+//       me.mouseY.value = e.pageY
+//       const newDate = new Date();
+//       const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//       me.timeStamp.value = datetime
+//       me.clickedITMtl.value = ``
+//       me.clickedITMbr.value  = ``
+//       $("#mouse-events").triggerHandler("submit")
+//       fired=false;
+//     }
+//   },300)
+//   prevX = locX
+//   prevY = locY
+// })
 
 //Logs clicks
-document.addEventListener("click",function(e){
-    const me = document.querySelector("#mouse-events2")
-    me.event.value = 'mouse-location'
-    me.mouseX.value = e.pageX
-    me.mouseY.value = e.pageY
-    const newDate = new Date();
-    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
-    me.timeStamp.value = datetime
-    mouseMove = false;
-    me.clickedITMtl.value = ``
-    me.clickedITMbr.value  = ``
-    $("#mouse-events").triggerHandler("submit")
-})
+// document.addEventListener("click",function(e){
+//     const me = document.querySelector("#mouse-events2")
+//     me.event.value = 'mouse-location'
+//     me.mouseX.value = e.pageX
+//     me.mouseY.value = e.pageY
+//     const newDate = new Date();
+//     const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getSeconds()}`
+//     me.timeStamp.value = datetime
+//     mouseMove = false;
+//     me.clickedITMtl.value = ``
+//     me.clickedITMbr.value  = ``
+//     $("#mouse-events").triggerHandler("submit")
+// })
 
 /* 
 ################################
@@ -715,7 +702,7 @@ $("#question1").submit(function(e){
     const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
     setTimeout(function(){
         $.ajax({
-            headers: {'X-CSRFToken': csrftoken, 'event':'submission', 'question': 'q1','timeStamp':datetime,'pageState':'Question 1'},
+            headers: {'X-CSRFToken': csrftoken, 'question': 'q1','timeStamp':datetime,'pageState':'Question 1'},
             type:"POST",
             url: url,
             data: form.serialize(),

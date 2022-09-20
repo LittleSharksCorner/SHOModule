@@ -59,10 +59,10 @@ const albtn3 = document.getElementById('al-button-3')
 const albtn4 = document.getElementById('al-button-4')
 const next1 = document.getElementById('btn1')
 const back1 = document.getElementById('btn11')
-const next2 = document.getElementById('btn2')
-const back2 = document.getElementById('btn22')
-const next3 = document.getElementById('btn3')
-const back3 = document.getElementById('btn33')
+// const next2 = document.getElementById('btn2')
+// const back2 = document.getElementById('btn22')
+// const next3 = document.getElementById('btn3')
+// const back3 = document.getElementById('btn33')
 const cs0 = document.getElementById('cs0')
 const cs1 = document.getElementById('cs1')
 const cs2 = document.getElementById('cs2')
@@ -93,14 +93,15 @@ const CE1 = document.getElementById('ConE1')
 const CE2 = document.getElementById('ConE2')
 const CE3 = document.getElementById('ConE3')
 const CE4 = document.getElementById('ConE4')
-
+const btn2posttest = document.getElementById('btn2posttest')
 
 let fin
-// cs0.style.display = 'none'
-// cs1.style.display='none'
-// cs2.style.display = 'none'
-//  cs3.style.display = 'none'
-// cs4.style.display='none'
+cs0.style.display = 'none'
+cs1.style.display='none'
+cs2.style.display = 'none'
+cs3.style.display = 'none'
+cs4.style.display='none'
+cs5.style.display='none'
 let Kbtn_clicked = false
 let Ubtn_clicked = false
 let Wbtn_clicked = false
@@ -179,10 +180,6 @@ Wbtn.addEventListener('click', ()=>{
     }
 })
 
-// CE1.addEventListener('ended',()=>{
-//     Ebtn.style.display='inline'
-// })
-
 Ebtn.addEventListener('click', ()=>{
     dK.pause();
     dU.pause();
@@ -239,7 +236,7 @@ pausebtn.addEventListener('click', ()=>{
 })
 
 replaybtn.addEventListener('click', ()=>{
-    probstatement.currentTime= 22
+    probstatement.currentTime= 0
     probstatement.play()
     // probstatement.currentTime= probstatement.duration
 })
@@ -571,10 +568,12 @@ $("#mul-choice-2").submit(function(e){
 
 hint3abtn.addEventListener('click', ()=>{
     document.getElementById('hint3a').style.opacity=1;
+    $("#hintform3a").triggerHandler("submit")
 })
 
 hint3bbtn.addEventListener('click',()=>{
     document.getElementById('hint3b').style.opacity=1;
+    $("#hintform3b").triggerHandler("submit")
 })
 
 $("#mul-choice-3-a").submit(function(e){
@@ -593,6 +592,21 @@ $("#mul-choice-3-a").submit(function(e){
             document.getElementById('prob3b-box').style.display='block';
             hint3bbtn.style.display='inline'
         }
+        })
+});
+
+$("#hintform3a").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'hintform3a','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
         })
 });
 
@@ -616,6 +630,21 @@ $("#mul-choice-3-b").submit(function(e){
         })
 });
 
+$("#hintform3b").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'hintform3b','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
+        })
+});
+
 
 
 
@@ -627,4 +656,45 @@ $("#mul-choice-3-b").submit(function(e){
 
 hint4btn.addEventListener('click',()=>{
     document.getElementById('hint4').style.opacity=1;
+    $("#hintform4").triggerHandler("submit")
+})
+
+$("#hintform4").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'hintform4','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
+        })
+});
+
+$("#mul-choice-4").submit(function(e){
+    e.preventDefault();
+    const form = $(this);
+    const newDate = new Date();
+    const datetime = `${newDate.getFullYear()}-${newDate.getMonth() + 1}-${newDate.getDate()} --- ${newDate.getHours()} : ${newDate.getMinutes()} : ${newDate.getMilliseconds()}`
+    let url = form.attr("action");
+    const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+    $.ajax({
+        headers: {'X-CSRFToken': csrftoken,'question':'q4','timeStamp':datetime},
+        type:"POST",
+        url: url,
+        data: form.serialize(),
+        complete: function(){
+            cs4.style.display='none';
+            cs5.style.display='grid'
+        }
+        })
+});
+
+////////     Hint Submission     //////////////////////////////////////////////////////////////////////////////////////////
+
+btn2posttest.addEventListener('click',()=>{
+    window.location.replace('/Energy/Energy_HLG/Post')
 })

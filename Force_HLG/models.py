@@ -8,25 +8,25 @@ class pretestEdu(models.Model):
     choice = models.CharField(max_length=25)
 
 
-class pretestLog(models.Model):
-    pageState = models.CharField(max_length=200,blank=True)
-    event = models.CharField(max_length=100)
-    user = models.CharField(max_length=25)
-    videoNumber = models.CharField(max_length=25,blank=True)
-    videoTime = models.CharField(max_length=25,blank=True)
-    timeStamp = models.CharField(max_length=100)
-    Wandering = models.CharField(max_length=25,blank=True)
+# class pretestLog(models.Model):
+#     pageState = models.CharField(max_length=200,blank=True)
+#     event = models.CharField(max_length=100)
+#     user = models.CharField(max_length=25)
+#     videoNumber = models.CharField(max_length=25,blank=True)
+#     videoTime = models.CharField(max_length=25,blank=True)
+#     timeStamp = models.CharField(max_length=100)
+#     Wandering = models.CharField(max_length=25,blank=True)
 
-class pretestMouseEvent(models.Model):
-    pageState = models.CharField(max_length=200,blank=True)
-    event = models.CharField(max_length=100)
-    user = models.CharField(max_length=25)
-    timeStamp = models.CharField(max_length=100)
-    mouseX = models.CharField(max_length=25,blank=True)
-    mouseY = models.CharField(max_length=25,blank=True)
-    clickedITMtl = models.CharField(max_length=40,blank=True)
-    clickedITMbr = models.CharField(max_length=40,blank=True)
-    keyPressed = models.CharField(max_length=25,blank=True)
+# class pretestMouseEvent(models.Model):
+#     pageState = models.CharField(max_length=200,blank=True)
+#     event = models.CharField(max_length=100)
+#     user = models.CharField(max_length=25)
+#     timeStamp = models.CharField(max_length=100)
+#     mouseX = models.CharField(max_length=25,blank=True)
+#     mouseY = models.CharField(max_length=25,blank=True)
+#     clickedITMtl = models.CharField(max_length=40,blank=True)
+#     clickedITMbr = models.CharField(max_length=40,blank=True)
+#     keyPressed = models.CharField(max_length=25,blank=True)
 
 # class vectorsEdu(models.Model):
 #     pageState = models.CharField(max_length=200,blank=True)
@@ -90,7 +90,7 @@ class pretestMouseEvent(models.Model):
 #     keyPressed = models.CharField(max_length=25,blank=True)
 
 class energyEdu(models.Model):
-    choice = models.CharField(max_length=25)
+    choice = models.CharField(max_length=25,blank=True)
     user = models.CharField(max_length=100,blank=True)
     question = models.CharField(max_length=25,blank=True)
     timeStamp = models.CharField(max_length=100,blank=True)

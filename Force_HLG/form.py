@@ -10,15 +10,15 @@ class pretestForm(forms.ModelForm):
     ('3',''),('4',''),('5','')]
     choice = forms.CharField(widget=forms.RadioSelect(choices=choice_field,attrs={'style':"width:1.2rem; height:1.2rem"}))
 
-class pretestLogForm(forms.ModelForm):
-        class Meta:
-            model = pretestLog
-            fields = ('pageState','event','timeStamp')
+# class pretestLogForm(forms.ModelForm):
+#         class Meta:
+#             model = pretestLog
+#             fields = ('pageState','event','timeStamp')
 
-class pretestMouseForm(forms.ModelForm):
-        class Meta:
-            model = pretestMouseEvent
-            fields = ('pageState','event','timeStamp','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
+# class pretestMouseForm(forms.ModelForm):
+#         class Meta:
+#             model = pretestMouseEvent
+#             fields = ('pageState','event','timeStamp','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
 
 # class vectorLogForm(forms.ModelForm):
 #         class Meta:
@@ -70,7 +70,7 @@ class energyForm(forms.ModelForm):
         fields = ('choice','question','timeStamp')
     choice_field = [('1',''),
     ('2',''),
-    ('3',''),('4','')]
+    ('3',''),('4',''),('NA','')]
     choice = forms.CharField(widget=forms.RadioSelect(choices=choice_field,attrs={'style':"width:1.2rem; height:1.2rem"}))
 
 class posttestForm(forms.ModelForm):
@@ -82,15 +82,15 @@ class posttestForm(forms.ModelForm):
     ('3',''),('4','')]
     choice = forms.CharField(widget=forms.RadioSelect(choices=choice_field,attrs={'style':"width:1.2rem; height:1.2rem"}))
 
-class posttestLogForm(forms.ModelForm):
-        class Meta:
-            model = posttestLog
-            fields = ('pageState','event','timeStamp')
+# class posttestLogForm(forms.ModelForm):
+#         class Meta:
+#             model = posttestLog
+#             fields = ('pageState','event','timeStamp')
 
-class posttestMouseForm(forms.ModelForm):
-        class Meta:
-            model = posttestMouseEvent
-            fields = ('pageState','event','timeStamp','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
+# class posttestMouseForm(forms.ModelForm):
+#         class Meta:
+#             model = posttestMouseEvent
+#             fields = ('pageState','event','timeStamp','mouseX','mouseY','clickedITMtl','clickedITMbr','keyPressed')
 
 
 

@@ -11,42 +11,24 @@ def info(request):
 # View for pretest
 def pretest(request):
     if request.method == "POST":
-        if request.headers['event'] == 'submission':
-            form = pretestForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                form.question = request.headers['question']
-                form.timeStamp = request.headers['timeStamp']
-                form.pageState = request.headers['pageState']
-                form.save()
-                return HttpResponse('There was a problem')
-            else: 
-                print(form.errors)
-        elif request.headers['event'] == 'page':
-            form = pretestLogForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                form.save()
-                return HttpResponse('There was a problem')
-        elif request.headers['event'] == 'mouse':
-            form = pretestMouseForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                form.save()
-                return HttpResponse('There was a problem')
-            else:
-                print(form.errors)
+        form = pretestForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user = request.user
+            form.question = request.headers['question']
+            form.timeStamp = request.headers['timeStamp']
+            form.pageState = request.headers['pageState']
+            form.save()
+            return HttpResponse('There was a problem')
+        else: 
+            print(form.errors)
+
+
             
     else:
         form_list = [pretestForm() for i in range(10)]
         form_label_list = ['form'+str(i+1) for i in range(10)]
         forms = dict(zip(form_label_list,form_list))
-        forms['log'] = pretestLogForm()
-        forms['mouse'] = pretestMouseForm()
-        forms['mouse2'] = pretestMouseForm()
         return render(request,'Force_HLG/pretest.html',{'forms':forms})
 
 
@@ -104,50 +86,32 @@ def energy(request):
         forms['form2'] = energyForm()
         forms['form3a'] = energyForm()
         forms['form3b'] = energyForm()
+        forms['hintform3a'] = energyForm(initial={'choice':'NA'})
+        forms['hintform3b'] = energyForm(initial={'choice':'NA'})
+        forms['hintform4'] = energyForm(initial={'choice':'NA'})
         return render(request,'Force_HLG/energy.html',{'forms':forms})
 
 # View for pretest
 def posttest(request):
     if request.method == "POST":
-        if request.headers['event'] == 'submission':
-            form = posttestForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                form.question = request.headers['question']
-                form.timeStamp = request.headers['timeStamp']
-                form.pageState = request.headers['pageState']
-                form.save()
-                return HttpResponse('There was a problem')
-            else: 
-                print(form.errors)
-        elif request.headers['event'] == 'page':
-            form = posttestLogForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                print(request.user)
-                form.save()
-                
-                print('log form saved')
-                return HttpResponse('yay')
-        elif request.headers['event'] == 'mouse':
-            print('mouse')
-            form = posttestMouseForm(request.POST)
-            if form.is_valid():
-                form = form.save(commit=False)
-                form.user = request.user
-                form.save()
-                print('mouse form saved')
-                return HttpResponse('There was a problem')
+        form = posttestForm(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user = request.user
+            form.question = request.headers['question']
+            form.timeStamp = request.headers['timeStamp']
+            form.pageState = request.headers['pageState']
+            form.save()
+            return HttpResponse('There was a problem')
+        else: 
+            print(form.errors)
 
+
+            
     else:
         form_list = [posttestForm() for i in range(10)]
         form_label_list = ['form'+str(i+1) for i in range(10)]
         forms = dict(zip(form_label_list,form_list))
-        forms['log'] = posttestLogForm()
-        forms['mouse'] = posttestMouseForm()
-        forms['mouse2'] = posttestMouseForm()
         return render(request,'Force_HLG/postTest.html',{'forms':forms})
 
 def complete(request):

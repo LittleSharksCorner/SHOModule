@@ -18,14 +18,14 @@
                     <img id="logo" height="48" width="48" alt="" src="{% static "navbarico.svg" %}"></img>
                     Energy Module
                  </div>
-                 <div class="reporting">
+                 <!-- <div class="reporting">
                   <div class="statement">
                     <h4>I am feeling</h4>
                   </div>
                   <div id="mental-state-buttons">
                     <button id="distracted-button" class="btn alternate1">Distracted</button>
                   </div>
-                </div>
+                </div> -->
                 <div class="tabs">
                     <nav>
                       <ul>
@@ -92,7 +92,20 @@
 </form> -->
 <!-- End Forms -->
 
+<form id="hintform3a" style="display:none">
+  {{forms.hintform3a}}
+  {%csrf_token%}
+</form>
 
+<form id="hintform3b" style="display:none">
+  {{forms.hintform3b}}
+  {%csrf_token%}
+</form>
+
+<form id="hintform4" style="display:none">
+  {{forms.hintform4}}
+  {%csrf_token%}
+</form>
 
 
 
@@ -158,9 +171,6 @@
 
 
 
-
-
-
 <!--------------------------- CS1 -------------------------------------------------------------------------------->
 <div class="content-stage" id="cs1" >
     <div class="hdr">
@@ -189,10 +199,10 @@
       <h3 id="step-4"><span style="font-size:2vw"><strong>Step 4:</strong></span> Use algebra</h3>
 
       <!-- The explanation   -->
-      <h3 id="top"> - Potential energy \(\mathbf{=mgh_0}\)</h3>
-      <h3 id="process"> - Potention energy \(\mathbf{=mgh}\)<br> - Kinetic energy \(\mathbf{=\frac{1}{2}mv^2}\) <br> 
-        - Energy loss due to friction \(\mathbf{=W}\)</h3>
-      <h3 id="bottom">- Kinetic energy \(\mathbf{\frac{1}{2}mV_{f}^{2}}\)</h3>
+      <h3 id="top"> Potential energy \(\mathbf{=mgh_0}\)</h3>
+      <h3 id="process">Potention energy \(\mathbf{=mgh}\)<br>Kinetic energy \(\mathbf{=\frac{1}{2}mv^2}\) <br> 
+      Energy loss due to friction \(\mathbf{=W}\)</h3>
+      <h3 id="bottom">Kinetic energy \(\mathbf{\frac{1}{2}mV_{f}^{2}}\)</h3>
       <ul id="notes">
         <li> If the problem is frictionless (\(\mathbf{W=0}\)), then from the highlighted equation above, 
           <span style="background-color: rgb(255, 255, 105)">\(\mathbf{V_f = \sqrt{2gh_0}}\)</span></li>
@@ -207,10 +217,11 @@
       <h3 id="plus-1">+</h3>
       <h3 id="equal-1">=</h3>
       <h3 id="algebra-1">\( mgh_0 = W + \frac{1}{2}m\color{red} V_f^2\) </h3>
-      <h3 id="algebra-2">\( mgh_0 - W = \frac{1}{2}m\color{red} V_f^2\)</h3>
-      <h3 id="algebra-3">\( 2*(mgh_0 -W) = m \color{red} V_f^2\)</h3>
-      <h3 id="algebra-4">\( \frac{2*(mgh_0 - W)}{m} = \color{red} V_f^2\)</h3>
-      <h3 id="algebra-5"><span style="background-color:yellow">\( \sqrt{\frac{2*(mgh_0 - W)}{m}} = \color{red} V_f\)</span></h3>
+      <h3 id="algebra-2">\( mgh_0 - W = \frac{1}{2}m\color{red} V_f^2\) <span id="expl1">(minus \(\mathbf{W}\) from both sides)</span></h3>
+      <h3 id="algebra-3">\( 2*(mgh_0 -W) = m \color{red} V_f^2\) <span id="expl2">(multiply both sides by \(\mathbf{2}\))</span></h3>
+      <h3 id="algebra-4">\( \frac{2*(mgh_0 - W)}{m} = \color{red} V_f^2\) <span id="expl3">(divide both sides by \(\mathbf{m}\))</span></h3>
+      <h3 id="algebra-5"><span style="background-color:yellow">\( \sqrt{\frac{2*(mgh_0 - W)}{m}} = \color{red} V_f\)</span> 
+        <span id="expl4">(take <strong>square-root</strong> both sides)</span></h3>
       <!-- <h3 id="algebra-5">\(\sqrt{\frac{2*(mgh_0 - W)}{m}} = \color{red} V_f\)</h3> -->
 
       <!-- The buttons -->
@@ -243,38 +254,32 @@
       <img id="pausebutton" src="{% static "IMG/energy/pause.svg"%}"/>
       <img id="replaybutton" src="{% static "IMG/energy/replay.svg"%}"/>
 
+
+
+      <button class="btn buttons" id="btn11"><strong>Review</strong></button>
+      <button id="btn1" class="btn buttons"><strong>Practice</strong></button>
+
+      <!-- The AI audio -->
+      <audio class="primary-bg" id="problemstatement" controlList="nodownload">
+        <source src="https://dl.dropbox.com/s/4xowk0qqk05bwth/Energy%20Mod_%20GenProb-2022-08-27.wav?dl=1"/>
+      </audio>
+      <audio class="primary-bg" id="genprob-step1" controlList="nodownload">
+        <source src="https://dl.dropbox.com/s/bwdlubpqbd50gjt/Energy%20Mod_%20GenProb%20Step1-2022-08-28.wav?dl=1"/>
+      </audio>
+      <audio class="primary-bg" id="genprob-step2" controlList="nodownload">
+        <source src="https://dl.dropbox.com/s/w0zd98568f7kwl4/GenProbStep2-2022-09-01.wav?dl=1"/>
+      </audio>
+      <audio class="primary-bg" id="genprob-step3" controllist="nodownload">
+        <source src="https://dl.dropbox.com/s/xa5ef0w22bzydzf/Energy%20Mod_%20GenProb%20Step%203-2022-09-03.wav?dl=1">
+      </audio>
+      <audio class="primary-gb" id="genprob-step4" controllist="nodownload">
+        <source src="https://dl.dropbox.com/s/6kpbiu4uu0dxfwu/Energy%20Mod_%20GrnProb%20Step%204-2022-09-03.wav?dl=1">
+      </audio>
+      <audio class="primary-bg" id="genprob-step4-2" controllist="nodownload">
+        <source src="https://dl.dropbox.com/s/xx1exwa681do30k/Energy%20Mod_%20genprob%20step%204-2-2022-09-05.wav?dl=1">
+      </audio>
     </div>
-
-
-    <button class="btn buttons" id="btn11"><strong>Review</strong></button>
-    <button id="btn1" class="btn buttons"><strong>Practice</strong></button>
-
-    <!-- The AI audio -->
-    <audio class="primary-bg" id="problemstatement" controlList="nodownload">
-      <source src="https://dl.dropbox.com/s/4xowk0qqk05bwth/Energy%20Mod_%20GenProb-2022-08-27.wav?dl=1"/>
-    </audio>
-    <audio class="primary-bg" id="genprob-step1" controlList="nodownload">
-      <source src="https://dl.dropbox.com/s/bwdlubpqbd50gjt/Energy%20Mod_%20GenProb%20Step1-2022-08-28.wav?dl=1"/>
-    </audio>
-    <audio class="primary-bg" id="genprob-step2" controlList="nodownload">
-      <source src="https://dl.dropbox.com/s/w0zd98568f7kwl4/GenProbStep2-2022-09-01.wav?dl=1"/>
-    </audio>
-    <audio class="primary-bg" id="genprob-step3" controllist="nodownload">
-      <source src="https://dl.dropbox.com/s/xa5ef0w22bzydzf/Energy%20Mod_%20GenProb%20Step%203-2022-09-03.wav?dl=1">
-    </audio>
-    <audio class="primary-gb" id="genprob-step4" controllist="nodownload">
-      <source src="https://dl.dropbox.com/s/6kpbiu4uu0dxfwu/Energy%20Mod_%20GrnProb%20Step%204-2022-09-03.wav?dl=1">
-    </audio>
-    <audio class="primary-bg" id="genprob-step4-2" controllist="nodownload">
-      <source src="https://dl.dropbox.com/s/xx1exwa681do30k/Energy%20Mod_%20genprob%20step%204-2-2022-09-05.wav?dl=1">
-    </audio>
-    
 </div>
-
-
-
-
-
 
 
 
@@ -291,21 +296,33 @@
    <!-- Problem statement -->
   <div id="prob1-box">
    <h3 id="prob1"> <strong> <span id="problem1"> Problem 1:</span></strong> Given 2 scenarios, 
-    a \(\mathbf{15g}\) bullet flying at \(\mathbf{5500m/s}\) 
+    a \(\mathbf{15g}\) bullet flying at \(\mathbf{350m/s}\) 
     and a \(\mathbf{64kg}\) man running at speed \(\mathbf{2.5m/s}\). Which has the larger kinetic energy? </h3>
       <!-- <div><img src="{% static "IMG/Pre/pref2.svg"%}"/></div> -->
         
         <form method="POST" id="mul-choice-1">
             <p>Please select a choice below</p>
-            <div>
+            <ul id="EP-prob1">
+              <li>
                 {{forms.form1.choice.0}}
                 <label for="q1c1">The bullet</label><br/>
+              </li>
+              <li>
                 {{forms.form1.choice.1}}
                 <label for="q1c2">The man</label><br/>
+              </li>
+              <li>
                 {{forms.form1.choice.2}}
                 <label for="q1c3">Both have the same kinetic energy</label><br/>
-                {% csrf_token %}
-            </div>
+              </li>
+            </ul>
+            <script>
+              var p1 = document.getElementById('EP-prob1');
+              for (var i = p1.children.length; i >= 0; i--) {
+              p1.appendChild(p1.children[Math.random() * i | 0]);
+              }
+            </script>
+            {% csrf_token %}
         </form>
         <img id="prob_1_bullet" src="{% static "IMG/energy/prob1_bullet.svg"%}"/>
         <img id="prob_1_runner" src="{% static "IMG/energy/prob1_runner.svg"%}"/>
@@ -320,15 +337,27 @@
           
       <form method="POST" id="mul-choice-2">
           <p>Please select a choice below</p>
-          <div>
+          <ul id="EP-prob2">
+            <li>
               {{forms.form2.choice.0}}
               <label for="q2c1">The car</label><br/>
+            </li>
+            <li>
               {{forms.form2.choice.1}}
               <label for="q2c2">The roler coaster</label><br/>
+            </li>
+            <li>
               {{forms.form2.choice.2}}
               <label for="q2c3">Both have the same potential energy</label><br/>
-              {% csrf_token %}
-          </div>
+            </li>
+          </ul>
+          <script>
+            var p2 = document.getElementById('EP-prob2');
+            for (var i = p2.children.length; i >= 0; i--) {
+            p2.appendChild(p2.children[Math.random() * i | 0]);
+            }
+          </script>
+          {% csrf_token %}
       </form>
       <img id="prob2-car" src="{% static "IMG/energy/car.svg"%}"/>
       <img id="prob2-roller-coaster" src="{% static "IMG/energy/roller_coaster.svg"%}"/>
@@ -336,10 +365,6 @@
   </div>
   </div>
 </div>
-
-
-
-
 
 
 
@@ -354,34 +379,47 @@
     </div>
     <div class="ctr">
       <!-- Problem statement -->
-      <h3 id="prob3"> <strong>Problem 3:</strong> Ben stands on the rooftop of a building holding a tennis ball \(30m\) 
-        above the ground. Ben throws the ball upward at a speed of \(5m/s\). Given the gravitational constant \(g=9.8 m/s^2\).</h3>
-      <div id="prob3a-box">
-      <h3 id="prob3a">a/ What is the highest point the ball can reach before falling back down?</h3>
-
+      <h3 id="prob3"> <strong>Problem 3:</strong> Ben stands on the rooftop of a building holding a tennis ball \(\mathbf{30m}\) 
+        above the ground. Ben throws the ball upward at a speed of \(\mathbf{5m/s}\). Given the gravitational constant \(\mathbf{g=9.8 m/s^2}\).</h3>
       <button id="hint3abtn" class="btn buttons">Hint</button>
       <button id="hint3bbtn" class="btn buttons">Hint</button>
 
       <h3 id="hint3a">+ Define what type of energy when the ball is at points A and B.
-        <br/> + Apply conservation of energy when the ball is at points A and B.
+          <br/> + Apply conservation of energy when the ball is at points A and B.
       </h3>
       <h3 id="hint3b">+ Define what type of energy when the ball is at points A and C.
-        <br/> + Apply conservation of energy when the ball is at points A and C.
+          <br/> + Apply conservation of energy when the ball is at points A and C.
       </h3>
 
+      <div id="prob3a-box">
+        <h3 id="prob3a">a/ What is the highest point the ball can reach before falling back down?</h3>
         <form method="POST" id="mul-choice-3-a">
           <p>Please select a choice below</p>
-          <div>
-            {{forms.form3a.choice.0}}
-            <label for="q3ac1"> \(32.55\) \(m\)</label> <br/>
-            {{forms.form3a.choice.1}}
-            <label for="q3ac2"> \(31.28\) \(m\)</label> <br/>
-            {{forms.form3a.choice.2}}
-            <label for="q3ac3"> \(30.25\) \(m\)</label> <br/>
-            {{forms.form3a.choice.3}}
-            <label for="q3ac4"> None of the above</label> <br/>
-            {% csrf_token %}
-          </div>
+          <ul id="EP-prob3a">
+            <li>
+              {{forms.form3a.choice.0}}
+              <label for="q3ac1"> \(32.55\) \(m\)</label> <br/>
+            </li>
+            <li>
+              {{forms.form3a.choice.1}}
+              <label for="q3ac2"> \(31.28\) \(m\)</label> <br/>
+            </li>
+            <li>
+              {{forms.form3a.choice.2}}
+              <label for="q3ac3"> \(30.25\) \(m\)</label> <br/>
+            </li>
+            <li>
+              {{forms.form3a.choice.3}}
+              <label for="q3ac4"> None of these answers</label> <br/>
+            </li>
+          </ul>
+          <script>
+            var p3a = document.getElementById('EP-prob3a');
+            for (var i = p3a.children.length; i >= 0; i--) {
+            p3a.appendChild(p3a.children[Math.random() * i | 0]);
+            }
+          </script>
+          {% csrf_token %}
         </form>
         <img id="prob3-ben" src="{% static "IMG/energy/prob3_ben.svg"%}"/>
         <button id="subbtn3a" form="mul-choice-3-a" class="btn primary" type="submit">Submit</button>
@@ -391,17 +429,31 @@
         <h3 id="prob3b">b/ What is the speed of the ball when it touches the ground?</h3>
         <form method="POST" id="mul-choice-3-b">
           <p>Please select a choice below</p>
-          <div>
-            {{forms.form3b.choice.0}}
-            <label for="q3bc1"> \(24.76\) \(m/s\)</label> <br/>
-            {{forms.form3b.choice.1}}
-            <label for="q3bc2"> \(17.51\) \(m/s\)</label> <br/>
-            {{forms.form3b.choice.2}}
-            <label for="q3bc3"> \(17.86\) \(m/s\)</label> <br/>
-            {{forms.form3b.choice.3}}
-            <label for="q3bc4"> None of the above</label> <br/>
-            {% csrf_token %}
-          </div>
+          <ul id="EP-prob3b">
+              <li>
+                {{forms.form3b.choice.0}}
+                <label for="q3bc1"> \(24.76\) \(m/s\)</label> <br/>
+              </li>
+              <li>    
+                {{forms.form3b.choice.1}}
+                <label for="q3bc2"> \(17.51\) \(m/s\)</label> <br/>
+              </li>
+              <li>
+                {{forms.form3b.choice.2}}
+                <label for="q3bc3"> \(17.86\) \(m/s\)</label> <br/>
+              </li>
+              <li>
+                {{forms.form3b.choice.3}}
+                <label for="q3bc4"> None of these answers</label> <br/>
+              </li>
+          </ul>
+          <script>
+            var p3b = document.getElementById('EP-prob3b');
+            for (var i = p3b.children.length; i >= 0; i--) {
+            p3b.appendChild(p3b.children[Math.random() * i | 0]);
+            }
+          </script>    
+          {% csrf_token %}
         </form>
         <button id="subbtn3b" form="mul-choice-3-b" class="btn primary" type="submit">Submit</button>
       </div>
@@ -409,11 +461,6 @@
     </div>
 
 </div>
-
-
-
-
-
 
 
 
@@ -427,8 +474,8 @@
     </h2>
   </div>
   <div class="ctr">
-    <h3 id="prob4"><strong>Problem 4: </strong> Charles pushes and releases a \(20kg\) box. The box then slides with speed \(v\) up a 
-      \(30^\circ\) ramp. The friction force between the box and the ramp is \(34N\) and the ramp is \(7m\) long. 
+    <h3 id="prob4"><strong>Problem 4: </strong> Charles pushes and releases a \(\mathbf{20kg}\) box. The box then slides with speed \(\mathbf{v}\) up a 
+      \(\mathbf{30^\circ}\) ramp. The friction force between the box and the ramp is \(\mathbf{34N}\) and the ramp is \(\mathbf{7m}\) long. 
       What is the box's minimum speed at the bottom of the ramp in order for it to slide to the top?</h3>
     <h3 id="hint4"> + What type(s) of energy does the box have at the top of the ramp? (Think about the word "<strong>minimum</strong>")
       <br/> + How does <strong>work done by friction</strong> apply into the conservation of energy equation? What is its formula?
@@ -438,22 +485,38 @@
     <div id="prob4-box">
       <form method="POST" id="mul-choice-4">
         <p>Please select a choice below</p>
-        <div>
-          {{forms.form3b.choice.0}}
-          <label for="q3bc1"> \(9.62\) \(m/s\)</label> <br/>
-          {{forms.form3b.choice.1}}
-          <label for="q3bc2"> \(10.78\) \(m/s\)</label> <br/>
-          {{forms.form3b.choice.2}}
-          <label for="q3bc3"> \(11.95\) \(m/s\)</label> <br/>
-          {{forms.form3b.choice.3}}
-          <label for="q3bc4"> None of the above</label> <br/>
-          {% csrf_token %}
-        </div>
+        <ul id="EP-prob4">
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+            <li>
+              {{forms.form3b.choice.0}}
+              <label for="q3bc1"> \(9.62\) \(m/s\)</label> <br/>
+            </li>
+            <li>  
+              {{forms.form3b.choice.1}}
+              <label for="q3bc2"> \(10.78\) \(m/s\)</label> <br/>
+            </li>
+            <li>
+              {{forms.form3b.choice.2}}
+              <label for="q3bc3"> \(11.95\) \(m/s\)</label> <br/>
+            </li>
+            <li>
+              {{forms.form3b.choice.3}}
+              <label for="q3bc4"> None of these answers</label> <br/>
+            </li>
+        </ul>
+        <script>
+          var p4 = document.getElementById('EP-prob4');
+          for (var i = p4.children.length; i >= 0; i--) {
+          p4.appendChild(p4.children[Math.random() * i | 0]);
+          }
+        </script>
+        {% csrf_token %}
       </form>
       <img id="prob4-charles" src="{% static "IMG/energy/prob4_charles.svg"%}"/>
-      <button id="subbtn4" form="mul-choice-3-b" class="btn primary" type="submit">Submit</button>
+      <button id="subbtn4" form="mul-choice-4" class="btn primary" type="submit">Submit</button>
     </div>
-
 
   <button id="hint4btn" class="btn buttons">Hint</button>
 
@@ -464,18 +527,15 @@
 
 
 
-<!--calibration-->
-<!-- <div id="calibration" class="info wrapper" style="display:none">
-  <div class="hdr"></div>
-  <div class="ctr" style="text-align: center;">
-      <h4>
-          Please tell the research assistant that it is time to calibrate the system. Thanks for your patience!
-      </h4>
+
+<!--------------------------- CS5 ------------------------------------------------------------------------------->
+<div class="content-stage" id="cs5">
+  <div class="ctr">
+      <h3 id="congrat"> Congratulations! You have finished reviewing the concept of energy. </h3>
+      <h3 id="post-test"> Click the button below to start the quiz.</h3>
+      <button id="btn2posttest" class="btn buttons"> Start </button>
   </div>
-  <div class="ftr">
-      <button id="cal" class="btn primary reduced-vis">Next</button>
-  </div>
-</div> -->
+</div>
 
 
 <script src="{% static "JS/energy.js"%}"></script>
